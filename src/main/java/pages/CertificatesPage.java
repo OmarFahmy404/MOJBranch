@@ -119,10 +119,7 @@ public class CertificatesPage extends PageBase
 	WebElement extraContentElement;
 	@FindBy(xpath = "/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/form/div[6]/div[2]/table/tbody/tr[3]/td[2]/document-actions/button")
 	WebElement validityOfTheAdditionalContent;
-	@FindBy(xpath = "/html/body/app-root/block-ui/div/inner-container/main/div/app-header/div/div/ul[2]/li/div")
-	WebElement userAcc;
-	@FindBy(xpath = "/html/body/app-root/block-ui/div/inner-container/main/div/app-header/div/div/ul[2]/li/div/div/a[4]")
-	WebElement logOutBtn;
+	
 	@FindBy(xpath = "/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/form/div[4]/div[3]/div[2]/input")
 	WebElement tGexemptedRadioBtn;
 	@FindBy(xpath = "/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/form/div[6]/button[5]")
@@ -347,14 +344,6 @@ public class CertificatesPage extends PageBase
 		
 		
 	}
-	public void loggedOut() throws InterruptedException
-	{
-		escapeMove();
-		fluentWait(userAcc);		
-		clickBtn(userAcc);
-		fluentWait(logOutBtn);
-		clickBtn(logOutBtn);
 
-	}
 
 }

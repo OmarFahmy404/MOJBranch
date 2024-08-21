@@ -14,11 +14,11 @@ public class LoginPage extends PageBase
 	@FindBy(id="Username")
 	public static WebElement userNameField;
 	@FindBy(id="Password")
-	WebElement passwordField;
+	static WebElement passwordField;
 	@FindBy(css = "button.btn-first.btn.btn-lg.btn-block")
-	WebElement loginBtn;
+	static WebElement loginBtn;
 	
-	public void CertificatesAndCopiesLogin(String userName,String password) 
+	public static void loginData(String userName,String password) 
 	{
 		loginProcess(userNameField,userName, passwordField, password, loginBtn);
 	}

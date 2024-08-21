@@ -8,12 +8,13 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 
 import pages.CertificatesPage;
+import pages.PageBase;
 import utilities.Helper;
 
 public class TestBase
 {
 	public static WebDriver driver;
-	private CertificatesPage certP;
+	private static PageBase base;
 
 	
 	@BeforeTest
@@ -33,8 +34,8 @@ public class TestBase
 	@AfterMethod
 	public void screenshotOnFailure(ITestResult result) throws InterruptedException 
 	{
-		certP=new CertificatesPage(driver);
 
+		base=new PageBase(driver);
 		
 		if(result.getStatus()==ITestResult.FAILURE) 
 		{
@@ -45,8 +46,7 @@ public class TestBase
 			
 			Helper.captureScreenshot(driver, result.getName());
 		}
-		
-			certP.loggedOut();
+		base.loggedOut();
 		
 		
 	}

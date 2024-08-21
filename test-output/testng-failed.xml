@@ -5,9 +5,12 @@
     <classes>
       <class name="tests.CopiesTest">
         <methods>
+          <include name="copyFromTheFrontOfTheCaseTest"/>
           <include name="startDriver"/>
           <include name="getInCertificatesPage"/>
+          <include name="memorialCopyTest"/>
           <include name="stopDriver"/>
+          <include name="officialJudCopyTest"/>
           <include name="screenshotOnFailure"/>
           <include name="recordCaseCopyTest"/>
         </methods>

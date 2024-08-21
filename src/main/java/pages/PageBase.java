@@ -9,6 +9,7 @@ import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
@@ -41,9 +42,19 @@ public class PageBase
 				 .ignoring(NoSuchElementException.class, ElementClickInterceptedException.class)
 				 .ignoring(ElementClickInterceptedException.class);
 		 
+		 this.driver=driver;
+		 
 		 
 		 
 	}
+	
+	
+	@FindBy(xpath = "/html/body/app-root/block-ui/div/inner-container/main/div/app-header/div/div/ul[2]/li/div")
+	static
+	WebElement userAcc;
+	@FindBy(xpath = "/html/body/app-root/block-ui/div/inner-container/main/div/app-header/div/div/ul[2]/li/div/div/a[4]")
+	static
+	WebElement logOutBtn;
 	
 	protected static void clickBtn(WebElement button) 
 	{
@@ -119,5 +130,26 @@ public class PageBase
 	protected static void escapeMove()
 	{
 		action.sendKeys(Keys.ESCAPE).perform();
+	}
+	
+	protected static void getStepBack() 
+	{
+		driver.navigate().back();
+	}
+	
+	protected static void navigateToSpecificURL(String url)
+	{
+		driver.navigate().to(url);
+	}
+	
+	public static void loggedOut() throws InterruptedException
+	{
+		Thread.sleep(1500);
+		escapeMove();
+		fluentWait(userAcc);		
+		clickBtn(userAcc);
+		fluentWait(logOutBtn);
+		clickBtn(logOutBtn);
+
 	}
 }

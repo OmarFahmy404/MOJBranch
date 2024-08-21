@@ -23,7 +23,7 @@ public class CertificatesTest extends TestBase
 		certAndCopyPage=new CertificatesAndCopiesHomePage(driver);
 		certPage=new CertificatesPage(driver);
 		PageBase.fluentWait(loginPage.userNameField);
-		loginPage.CertificatesAndCopiesLogin("abdo.cer", "Admin123");
+		loginPage.loginData("abdo.cer", "Admin123");
 		PageBase.fluentWait(certAndCopyPage.certificateTab);
 		certAndCopyPage.getIntoCertifitcateSection();
 		PageBase.fluentWait(certPage.addBtn);
