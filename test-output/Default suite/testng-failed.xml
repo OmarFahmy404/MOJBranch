@@ -3,18 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="tests.CopiesTest">
+      <class name="tests.CertificatesTest">
         <methods>
-          <include name="copyFromTheFrontOfTheCaseTest"/>
           <include name="startDriver"/>
           <include name="getInCertificatesPage"/>
-          <include name="memorialCopyTest"/>
           <include name="stopDriver"/>
-          <include name="officialJudCopyTest"/>
           <include name="screenshotOnFailure"/>
-          <include name="recordCaseCopyTest"/>
+          <include name="completeBrotestoCase"/>
         </methods>
-      </class> <!-- tests.CopiesTest -->
+      </class> <!-- tests.CertificatesTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

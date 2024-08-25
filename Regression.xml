@@ -1,0 +1,8 @@
+<suite name="Trunk 150 Regrission Suite">
+<test name="Regrission Test" perserve-order="true">
+<classes>
+<class name="tests.CertificatesTest"/>
+<class name="tests.CopiesTest"/>
+</classes>
+</test>
+</suite>

@@ -144,7 +144,7 @@ public class PageBase
 	
 	public static void loggedOut() throws InterruptedException
 	{
-		Thread.sleep(1500);
+		Thread.sleep(8000);
 		escapeMove();
 		fluentWait(userAcc);		
 		clickBtn(userAcc);

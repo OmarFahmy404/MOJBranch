@@ -296,7 +296,7 @@ public class CertificatesPage extends PageBase
 		setTxtInAnotherWay(exemptionReasonField, exemptionReason);
 		clickBtn(dSubmitBtn);
 		clickBtn(submitBtn2);
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 		uploadPdf(dAddCetificateOrderDocumentBtn, selectTheCertificateOrder, saveCertificateBtn);
 		Thread.sleep(7500);
 		uploadPdf(dAddFeeExemptionDocumentBtn, selectFeeExemptionDocumentbtn, saveFeeExemptionDocumentbtn);
