@@ -3,16 +3,6 @@
 <suite name="Failed suite [Trunk 150 Regrission Suite]">
   <test thread-count="5" name="Regrission Test(failed)">
     <classes>
-      <class name="tests.CertificatesTest">
-        <methods>
-          <include name="terroristGroupsCase"/>
-          <include name="getInCertificatesPage"/>
-          <include name="startDriver"/>
-          <include name="stopDriver"/>
-          <include name="screenshotOnFailure"/>
-          <include name="completeBrotestoCase"/>
-        </methods>
-      </class> <!-- tests.CertificatesTest -->
       <class name="tests.CopiesTest">
         <methods>
           <include name="copyFromTheFrontOfTheCaseTest"/>
@@ -25,6 +15,16 @@
           <include name="recordCaseCopyTest"/>
         </methods>
       </class> <!-- tests.CopiesTest -->
+      <class name="tests.CertificatesTest">
+        <methods>
+          <include name="startDriver"/>
+          <include name="completeSessionCasesCertProcess"/>
+          <include name="getInCertificatesPage"/>
+          <include name="stopDriver"/>
+          <include name="screenshotOnFailure"/>
+          <include name="completeBrotestoCase"/>
+        </methods>
+      </class> <!-- tests.CertificatesTest -->
     </classes>
   </test> <!-- Regrission Test(failed) -->
 </suite> <!-- Failed suite [Trunk 150 Regrission Suite] -->

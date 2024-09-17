@@ -1,43 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="4" total="5" passed="0" failed="1" skipped="0">
+<testng-results ignored="3" total="4" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-08-25T11:04:37 EEST" name="Default suite" finished-at="2024-08-25T11:05:32 EEST" duration-ms="55587">
+  <suite started-at="2024-09-17T16:01:02 EEST" name="Default suite" finished-at="2024-09-17T16:02:37 EEST" duration-ms="95011">
     <groups>
     </groups>
-    <test started-at="2024-08-25T11:04:37 EEST" name="Default test" finished-at="2024-08-25T11:05:32 EEST" duration-ms="55587">
-      <class name="tests.CertificatesTest">
-        <test-method is-config="true" signature="startDriver()[pri:0, instance:tests.CertificatesTest@ab7395e]" started-at="2024-08-25T11:04:37 EEST" name="startDriver" finished-at="2024-08-25T11:04:39 EEST" duration-ms="1812" status="PASS">
+    <test started-at="2024-09-17T16:01:02 EEST" name="Default test" finished-at="2024-09-17T16:02:37 EEST" duration-ms="95011">
+      <class name="tests.AnnouncementTest">
+        <test-method is-config="true" signature="startDriver()[pri:0, instance:tests.AnnouncementTest@3a4621bd]" started-at="2024-09-17T16:01:02 EEST" name="startDriver" finished-at="2024-09-17T16:01:05 EEST" duration-ms="2734" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startDriver -->
-        <test-method is-config="true" signature="getInCertificatesPage()[pri:0, instance:tests.CertificatesTest@ab7395e]" started-at="2024-08-25T11:04:39 EEST" name="getInCertificatesPage" finished-at="2024-08-25T11:04:45 EEST" duration-ms="6662" status="PASS">
+        <test-method is-config="true" signature="loginAndGetInAnnPart()[pri:0, instance:tests.AnnouncementTest@3a4621bd]" started-at="2024-09-17T16:01:05 EEST" name="loginAndGetInAnnPart" finished-at="2024-09-17T16:01:07 EEST" duration-ms="2560" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- getInCertificatesPage -->
-        <test-method signature="completeBrotestoCase()[pri:2, instance:tests.CertificatesTest@ab7395e]" started-at="2024-08-25T11:04:45 EEST" name="completeBrotestoCase" finished-at="2024-08-25T11:05:19 EEST" duration-ms="33311" status="FAIL">
+        </test-method> <!-- loginAndGetInAnnPart -->
+        <test-method signature="creatAnnAttachWithCaseFirstTimeTest()[pri:1, instance:tests.AnnouncementTest@3a4621bd]" started-at="2024-09-17T16:01:07 EEST" name="creatAnnAttachWithCaseFirstTimeTest" finished-at="2024-09-17T16:02:28 EEST" duration-ms="80956" status="FAIL">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/ngb-modal-window/div/div/ng-component/div[3]/div/div[1]/button"}
-  (Session info: chrome=127.0.6533.122)
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/form/div[1]/div[3]/b"}
+  (Session info: chrome=128.0.6613.138)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: '4.23.0', revision: '4df0a231af'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.2'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [10c9228649a163be9b89146bc2c5a595, findElement {using=xpath, value=/html/body/ngb-modal-window/div/div/ng-component/div[3]/div/div[1]/button}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.122, chrome: {chromedriverVersion: 127.0.6533.88 (a2d0cb026721..., userDataDir: C:\Users\ofahmy\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57743}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57743/devtoo..., se:cdpVersion: 127.0.6533.122, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 10c9228649a163be9b89146bc2c5a595]]>
+Command: [ab259456c656576a1af19c48e1c2edb1, findElement {using=xpath, value=/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/form/div[1]/div[3]/b}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.138, chrome: {chromedriverVersion: 127.0.6533.88 (a2d0cb026721..., userDataDir: C:\Users\ofahmy\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51870}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51870/devtoo..., se:cdpVersion: 128.0.6613.138, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ab259456c656576a1af19c48e1c2edb1]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/ngb-modal-window/div/div/ng-component/div[3]/div/div[1]/button"}
-  (Session info: chrome=127.0.6533.122)
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/form/div[1]/div[3]/b"}
+  (Session info: chrome=128.0.6613.138)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: '4.23.0', revision: '4df0a231af'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.2'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [10c9228649a163be9b89146bc2c5a595, findElement {using=xpath, value=/html/body/ngb-modal-window/div/div/ng-component/div[3]/div/div[1]/button}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.122, chrome: {chromedriverVersion: 127.0.6533.88 (a2d0cb026721..., userDataDir: C:\Users\ofahmy\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57743}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57743/devtoo..., se:cdpVersion: 127.0.6533.122, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 10c9228649a163be9b89146bc2c5a595
+Command: [ab259456c656576a1af19c48e1c2edb1, findElement {using=xpath, value=/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/form/div[1]/div[3]/b}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.138, chrome: {chromedriverVersion: 127.0.6533.88 (a2d0cb026721..., userDataDir: C:\Users\ofahmy\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51870}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51870/devtoo..., se:cdpVersion: 128.0.6613.138, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ab259456c656576a1af19c48e1c2edb1
 at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
 at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
@@ -54,10 +54,10 @@ at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:3
 at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:351)
 at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
 at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at jdk.proxy2/jdk.proxy2.$Proxy17.click(Unknown Source)
-at pages.PageBase.clickBtn(PageBase.java:61)
-at pages.CertificatesPage.constraintNonConstraintBrotesto(CertificatesPage.java:251)
-at tests.CertificatesTest.completeBrotestoCase(CertificatesTest.java:43)
+at jdk.proxy2/jdk.proxy2.$Proxy14.getText(Unknown Source)
+at pages.AnnBackPage.getAnnSerialNum(AnnBackPage.java:60)
+at pages.AnnStatusPage.searchOnAnnNum(AnnStatusPage.java:43)
+at tests.AnnouncementTest.creatAnnAttachWithCaseFirstTimeTest(AnnouncementTest.java:67)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
@@ -89,23 +89,23 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- completeBrotestoCase -->
-        <test-method is-config="true" signature="screenshotOnFailure(org.testng.ITestResult)[pri:0, instance:tests.CertificatesTest@ab7395e]" started-at="2024-08-25T11:05:19 EEST" name="screenshotOnFailure" finished-at="2024-08-25T11:05:32 EEST" duration-ms="13469" status="PASS">
+        </test-method> <!-- creatAnnAttachWithCaseFirstTimeTest -->
+        <test-method is-config="true" signature="screenshotOnFailure(org.testng.ITestResult)[pri:0, instance:tests.AnnouncementTest@3a4621bd]" started-at="2024-09-17T16:02:28 EEST" name="screenshotOnFailure" finished-at="2024-09-17T16:02:37 EEST" duration-ms="8468" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=completeBrotestoCase status=FAILURE method=CertificatesTest.completeBrotestoCase()[pri:2, instance:tests.CertificatesTest@ab7395e] output={null}]]]>
+                <![CDATA[[TestResult name=creatAnnAttachWithCaseFirstTimeTest status=FAILURE method=AnnouncementTest.creatAnnAttachWithCaseFirstTimeTest()[pri:1, instance:tests.AnnouncementTest@3a4621bd] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- screenshotOnFailure -->
-        <test-method is-config="true" signature="stopDriver()[pri:0, instance:tests.CertificatesTest@ab7395e]" started-at="2024-08-25T11:05:32 EEST" name="stopDriver" finished-at="2024-08-25T11:05:32 EEST" duration-ms="121" status="PASS">
+        <test-method is-config="true" signature="stopDriver()[pri:0, instance:tests.AnnouncementTest@3a4621bd]" started-at="2024-09-17T16:02:37 EEST" name="stopDriver" finished-at="2024-09-17T16:02:37 EEST" duration-ms="90" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopDriver -->
-      </class> <!-- tests.CertificatesTest -->
+      </class> <!-- tests.AnnouncementTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

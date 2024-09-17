@@ -23,7 +23,7 @@ public class TestBase
 			System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"/Drivers/chromedriver.exe");
 			driver=new ChromeDriver();
 			driver.manage().window().maximize();
-			driver.navigate().to("http://10.9.100.150/#/login");
+			driver.navigate().to("http://10.0.10.58:9091/#/login");
 	}	
 	
 	
@@ -42,7 +42,7 @@ public class TestBase
 			System.out.println("Failed");
 			System.out.println("Taking Screenshot....");
 			
-			Thread.sleep(3000);
+			//Thread.sleep(3000);
 			
 			Helper.captureScreenshot(driver, result.getName());
 		}

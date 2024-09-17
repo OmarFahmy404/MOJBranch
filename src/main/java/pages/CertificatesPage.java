@@ -87,6 +87,7 @@ public class CertificatesPage extends PageBase
 	WebElement printTheOrderTypeBtn;
 	@FindBy(xpath = "/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/form/div[7]/button[3]")
 	public static WebElement displayTheCertificateBtn;
+		
 	@FindBy(xpath = "/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/form/div[5]/div[3]/div[2]/input")
 	WebElement exemptedRadioBtn;
 	@FindBy(name="feesExemptionReason")
@@ -136,10 +137,10 @@ public class CertificatesPage extends PageBase
 	WebElement tGvalidityOfTheAdditionalContent;
 	@FindBy(xpath = "/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/form/div[6]/button[1]")
 	WebElement  tGviewFeeReceiptBtn;
-	@FindBy(xpath = "")
+	@FindBy(xpath = "/html/body/ngb-modal-window/div/div/ng-component/div[3]/div/div[1]/button")
 	WebElement  tGissuingTheReceiptBtn;                                  ///////////////////
-	@FindBy(xpath = "")
-	WebElement  tGdisplayTheCertificateBtn;                              ///////////////////
+	@FindBy(xpath = "/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/form/div[6]/button[3]")
+	public static WebElement  tGdisplayTheCertificateBtn;                              ///////////////////
 	@FindBy(name="plaintiffName")
 	WebElement caseBy;
 	@FindBy(xpath ="/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/form/div[4]/div[2]/div[1]/div/ng-select/div/div/div[2]")
@@ -200,7 +201,7 @@ public class CertificatesPage extends PageBase
 		selectFromDropDownNGList(classificationTableMajorElement, classificationTableMinorRentals);
 		selectFromDropDownNGList(courtMajorElement,courtMinorSouthCairo);
 		clickBtn(searchBtn);
-		fluentWait(BeneficiaryOfTheCertificateFromCaseMajorElement);
+		Thread.sleep(2000);
 		selectFromDropDownNGList(BeneficiaryOfTheCertificateFromCaseMajorElement,BeneficiaryOfTheCertificateFromCaseMinorFirstPerson);
 		fluentWait(exemptedRadioBtn);
 		clickBtn(exemptedRadioBtn);
@@ -210,9 +211,9 @@ public class CertificatesPage extends PageBase
 		clickBtn(submitBtn2);
 		Thread.sleep(4000);
 		uploadPdf(addTheCertificateOrder, selectTheCertificateOrder, saveCertificateBtn);
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		uploadPdf(addFeeExemptionDocumentbtn, selectFeeExemptionDocumentbtn, saveFeeExemptionDocumentbtn);
-		Thread.sleep(9000);
+		Thread.sleep(12000);
 		clickBtn(viewFeeReceiptBtn);
 		fluentWait(issuingTheReceiptBtn);
 		clickBtn(issuingTheReceiptBtn);
@@ -243,9 +244,9 @@ public class CertificatesPage extends PageBase
 		uploadPdf(addTheCertificateOrder, selectTheCertificateOrder, saveCertificateBtn);
 		Thread.sleep(8000);
 		uploadPdf(addFeeExemptionDocumentbtn, selectFeeExemptionDocumentbtn, saveFeeExemptionDocumentbtn);
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		uploadPdf(validityOfTheAdditionalContent, selectFeeExemptionDocumentbtn, saveFeeExemptionDocumentbtn);
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		clickBtn(viewFeeReceiptBtn);
 		Thread.sleep(2000);
 		clickBtn(issuingTheReceiptBtn);
@@ -276,7 +277,7 @@ public class CertificatesPage extends PageBase
 		clickBtn(tGviewFeeReceiptBtn);
 		fluentWait(tGissuingTheReceiptBtn);
 		clickBtn(tGissuingTheReceiptBtn);
-		fluentWait(tGdisplayTheCertificateBtn);
+		Thread.sleep(4000);
 		clickBtn(tGdisplayTheCertificateBtn);
 	}
 	public void caseDoesNotExist(String benfcNormalPersonId, String caseByWhome, String s_e_month , String extraContent , String exemptionReason) throws InterruptedException

@@ -86,11 +86,11 @@ public class TreasuryPage extends PageBase
 	
 	public static void completeThePaymentProcess(String tempNumber, String manualReciptNo) throws InterruptedException
 	{
-		LoginPage.loginData("treasury", "Admin123");
+		LoginPage.loginData("treasury", "Admin123!");
 		fluentWait(invoiceList);
 		clickBtn(invoiceList);
-		fluentWait(tempFilingNumberField);
-		selectFromDropDownNGList(reciptTypeMajor, reciptTypeOfficialCopyMinor);
+		Thread.sleep(2000);
+		//selectFromDropDownNGList(reciptTypeMajor, reciptTypeOfficialCopyMinor);
 		setTxtInAnotherWay(tempFilingNumberField, tempNumber);
 		fluentWait(searchBtn);
 		clickBtn(searchBtn);
@@ -108,11 +108,12 @@ public class TreasuryPage extends PageBase
 	}
 	
 	
-	public static void clickOnDisplayButton()
+	public static void clickOnDisplayButton() throws InterruptedException
 	{
 		 WebElement table=driver.findElement(By.xpath("/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/div/div[2]/div/div/table-server/div[2]/div/table"));
 		 WebElement row =table.findElement(By.xpath("/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/div/div[2]/div/div/table-server/div[2]/div/table/tbody/tr"));
 		 WebElement button=row.findElement(By.xpath("/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/div/div[2]/div/div/table-server/div[2]/div/table/tbody/tr/td[2]/button"));
+		Thread.sleep(2000);
 		 clickBtn(button);
 	}
 	
