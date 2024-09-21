@@ -18,9 +18,13 @@ public class SecretaryPage extends PageBase
 	@FindBy(xpath = "/html/body/app-root/block-ui/div/inner-container/main/app-menu/div/div[2]/ul/li[10]/a")
 	public 
 	WebElement admAnnStatusTab;
+	
+	@FindBy(xpath = "/html/body/app-root/block-ui/div/inner-container/main/app-menu/div/div[2]/ul/li[1]/a")
+	WebElement hearingManagementTab;
 
 	public void getInFeesAdvAnnTab()
 	{
+		fluentWait(feesAdmAnnTab);
 		clickBtn(feesAdmAnnTab);
 	}
 	
@@ -29,5 +33,12 @@ public class SecretaryPage extends PageBase
 		fluentWait(admAnnStatusTab);
 		clickBtn(admAnnStatusTab);
 	}
+	
+	public void getInHearingMangementTab()
+	{
+		fluentWait(hearingManagementTab);
+		clickBtn(hearingManagementTab);
+	}
+	
 	
 }

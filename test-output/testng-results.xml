@@ -1,46 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="3" total="4" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-09-17T16:01:02 EEST" name="Default suite" finished-at="2024-09-17T16:02:37 EEST" duration-ms="95011">
+  <suite started-at="2024-09-19T11:56:38 EEST" name="Default suite" finished-at="2024-09-19T11:58:27 EEST" duration-ms="108705">
     <groups>
     </groups>
-    <test started-at="2024-09-17T16:01:02 EEST" name="Default test" finished-at="2024-09-17T16:02:37 EEST" duration-ms="95011">
-      <class name="tests.AnnouncementTest">
-        <test-method is-config="true" signature="startDriver()[pri:0, instance:tests.AnnouncementTest@3a4621bd]" started-at="2024-09-17T16:01:02 EEST" name="startDriver" finished-at="2024-09-17T16:01:05 EEST" duration-ms="2734" status="PASS">
+    <test started-at="2024-09-19T11:56:38 EEST" name="Default test" finished-at="2024-09-19T11:58:27 EEST" duration-ms="108705">
+      <class name="tests.PublicHearingOfInvestigationTest">
+        <test-method is-config="true" signature="startDriver()[pri:0, instance:tests.PublicHearingOfInvestigationTest@1046d517]" started-at="2024-09-19T11:56:38 EEST" name="startDriver" finished-at="2024-09-19T11:56:46 EEST" duration-ms="8623" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startDriver -->
-        <test-method is-config="true" signature="loginAndGetInAnnPart()[pri:0, instance:tests.AnnouncementTest@3a4621bd]" started-at="2024-09-17T16:01:05 EEST" name="loginAndGetInAnnPart" finished-at="2024-09-17T16:01:07 EEST" duration-ms="2560" status="PASS">
+        <test-method is-config="true" signature="LoginAndGetInThePage()[pri:0, instance:tests.PublicHearingOfInvestigationTest@1046d517]" started-at="2024-09-19T11:56:46 EEST" name="LoginAndGetInThePage" finished-at="2024-09-19T11:56:49 EEST" depends-on-methods="tests.TestBase.startDriver" duration-ms="2798" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loginAndGetInAnnPart -->
-        <test-method signature="creatAnnAttachWithCaseFirstTimeTest()[pri:1, instance:tests.AnnouncementTest@3a4621bd]" started-at="2024-09-17T16:01:07 EEST" name="creatAnnAttachWithCaseFirstTimeTest" finished-at="2024-09-17T16:02:28 EEST" duration-ms="80956" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchElementException">
+        </test-method> <!-- LoginAndGetInThePage -->
+        <test-method signature="finishTheHearingOfInvestigationProcessTest()[pri:0, instance:tests.PublicHearingOfInvestigationTest@1046d517]" started-at="2024-09-19T11:56:49 EEST" name="finishTheHearingOfInvestigationProcessTest" finished-at="2024-09-19T11:58:17 EEST" duration-ms="87641" status="FAIL">
+          <exception class="org.openqa.selenium.ElementClickInterceptedException">
             <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/form/div[1]/div[3]/b"}
-  (Session info: chrome=128.0.6613.138)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+              <![CDATA[element click intercepted: Element <button class="btn btn-sm btn-add-outline btn-block" disabled="">...</button> is not clickable at point (113, 485). Other element would receive the click: <div class="block-ui-wrapper block-ui-main active">...</div>
+  (Session info: chrome=129.0.6668.58)
 Build info: version: '4.23.0', revision: '4df0a231af'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.2'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.10'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [ab259456c656576a1af19c48e1c2edb1, findElement {using=xpath, value=/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/form/div[1]/div[3]/b}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.138, chrome: {chromedriverVersion: 127.0.6533.88 (a2d0cb026721..., userDataDir: C:\Users\ofahmy\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51870}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51870/devtoo..., se:cdpVersion: 128.0.6613.138, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: ab259456c656576a1af19c48e1c2edb1]]>
+Command: [0b4fdf4c4a4eb3dfa522bcdbb6f35ca5, clickElement {id=f.3F33A5C3CDF71F5CAAE752676D154B75.d.AD985BAC511D09CC89397C2C862C19CA.e.47}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.58, chrome: {chromedriverVersion: 129.0.6668.58 (81a06fb873a9..., userDataDir: C:\Users\MEGAST~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59767}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59767/devtoo..., se:cdpVersion: 129.0.6668.58, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (0b4fdf4c4a4eb3dfa522bcdbb6f35ca5)] -> xpath: /html/body/app-root/block-ui/div/inner-container/main/div/div[2]/hearing-cases/div[2]/div[3]/div[2]/table-client/div[2]/div/div/div[2]/button[1]]
+Session ID: 0b4fdf4c4a4eb3dfa522bcdbb6f35ca5]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/form/div[1]/div[3]/b"}
-  (Session info: chrome=128.0.6613.138)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <button class="btn btn-sm btn-add-outline btn-block" disabled="">...</button> is not clickable at point (113, 485). Other element would receive the click: <div class="block-ui-wrapper block-ui-main active">...</div>
+  (Session info: chrome=129.0.6668.58)
 Build info: version: '4.23.0', revision: '4df0a231af'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.2'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.10'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [ab259456c656576a1af19c48e1c2edb1, findElement {using=xpath, value=/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/form/div[1]/div[3]/b}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.138, chrome: {chromedriverVersion: 127.0.6533.88 (a2d0cb026721..., userDataDir: C:\Users\ofahmy\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51870}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51870/devtoo..., se:cdpVersion: 128.0.6613.138, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: ab259456c656576a1af19c48e1c2edb1
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+Command: [0b4fdf4c4a4eb3dfa522bcdbb6f35ca5, clickElement {id=f.3F33A5C3CDF71F5CAAE752676D154B75.d.AD985BAC511D09CC89397C2C862C19CA.e.47}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.58, chrome: {chromedriverVersion: 129.0.6668.58 (81a06fb873a9..., userDataDir: C:\Users\MEGAST~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59767}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59767/devtoo..., se:cdpVersion: 129.0.6668.58, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (0b4fdf4c4a4eb3dfa522bcdbb6f35ca5)] -> xpath: /html/body/app-root/block-ui/div/inner-container/main/div/div[2]/hearing-cases/div[2]/div[3]/div[2]/table-client/div[2]/div/div/div[2]/button[1]]
+Session ID: 0b4fdf4c4a4eb3dfa522bcdbb6f35ca5
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
 at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
 at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
 at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
@@ -48,18 +50,21 @@ at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.ja
 at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
 at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
 at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:351)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at jdk.proxy2/jdk.proxy2.$Proxy14.getText(Unknown Source)
-at pages.AnnBackPage.getAnnSerialNum(AnnBackPage.java:60)
-at pages.AnnStatusPage.searchOnAnnNum(AnnStatusPage.java:43)
-at tests.AnnouncementTest.creatAnnAttachWithCaseFirstTimeTest(AnnouncementTest.java:67)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+at jdk.proxy2/jdk.proxy2.$Proxy13.click(Unknown Source)
+at pages.PageBase.clickBtn(PageBase.java:62)
+at pages.SecPublicHearingOfInvestigationPage.compeletInvestigationHearingProcess(SecPublicHearingOfInvestigationPage.java:181)
+at tests.PublicHearingOfInvestigationTest.finishTheHearingOfInvestigationProcessTest(PublicHearingOfInvestigationTest.java:32)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
 at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
 at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
@@ -68,7 +73,7 @@ at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInv
 at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
 at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
 at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 at org.testng.TestRunner.privateRun(TestRunner.java:829)
 at org.testng.TestRunner.run(TestRunner.java:602)
 at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
@@ -82,30 +87,30 @@ at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
 at org.testng.TestNG.runSuites(TestNG.java:1099)
 at org.testng.TestNG.run(TestNG.java:1067)
 at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- creatAnnAttachWithCaseFirstTimeTest -->
-        <test-method is-config="true" signature="screenshotOnFailure(org.testng.ITestResult)[pri:0, instance:tests.AnnouncementTest@3a4621bd]" started-at="2024-09-17T16:02:28 EEST" name="screenshotOnFailure" finished-at="2024-09-17T16:02:37 EEST" duration-ms="8468" status="PASS">
+        </test-method> <!-- finishTheHearingOfInvestigationProcessTest -->
+        <test-method is-config="true" signature="screenshotOnFailure(org.testng.ITestResult)[pri:0, instance:tests.PublicHearingOfInvestigationTest@1046d517]" started-at="2024-09-19T11:58:17 EEST" name="screenshotOnFailure" finished-at="2024-09-19T11:58:26 EEST" duration-ms="8987" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=creatAnnAttachWithCaseFirstTimeTest status=FAILURE method=AnnouncementTest.creatAnnAttachWithCaseFirstTimeTest()[pri:1, instance:tests.AnnouncementTest@3a4621bd] output={null}]]]>
+                <![CDATA[[TestResult name=finishTheHearingOfInvestigationProcessTest status=FAILURE method=PublicHearingOfInvestigationTest.finishTheHearingOfInvestigationProcessTest()[pri:0, instance:tests.PublicHearingOfInvestigationTest@1046d517] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- screenshotOnFailure -->
-        <test-method is-config="true" signature="stopDriver()[pri:0, instance:tests.AnnouncementTest@3a4621bd]" started-at="2024-09-17T16:02:37 EEST" name="stopDriver" finished-at="2024-09-17T16:02:37 EEST" duration-ms="90" status="PASS">
+        <test-method is-config="true" signature="stopDriver()[pri:0, instance:tests.PublicHearingOfInvestigationTest@1046d517]" started-at="2024-09-19T11:58:26 EEST" name="stopDriver" finished-at="2024-09-19T11:58:27 EEST" duration-ms="280" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopDriver -->
-      </class> <!-- tests.AnnouncementTest -->
+      </class> <!-- tests.PublicHearingOfInvestigationTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

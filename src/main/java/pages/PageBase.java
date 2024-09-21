@@ -2,6 +2,7 @@ package pages;
 
 import java.time.Duration;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.ElementClickInterceptedException;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoSuchElementException;
@@ -140,6 +141,17 @@ public class PageBase
 	protected static void navigateToSpecificURL(String url)
 	{
 		driver.navigate().to(url);
+	}
+	
+	protected static void getInSpecialCase(String caseId)
+	{
+		navigateToSpecificURL("http://10.0.10.58:9091/#/hearings/cases/"+caseId);
+	}
+	
+	protected static WebElement locatElementInTable(String tableClass ,int row , int col)
+	{
+		return driver.findElement(By.xpath("//table[@class='"+tableClass+"']/tbody/tr["+row+"]/td["+col+"]"));
+
 	}
 	
 	public static void loggedOut() throws InterruptedException
