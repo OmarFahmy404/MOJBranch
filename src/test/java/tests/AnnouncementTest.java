@@ -42,7 +42,11 @@ public class AnnouncementTest extends TestBase
 	public void creatAnnAttachWithCaseFirstTimeTest() throws InterruptedException
 	{
 		annFeesPage=new AnnFeesPage(driver);
+<<<<<<< HEAD
 		annFeesPage.createAnnAttachWithCaseFirstTime("7100","1", "1", "29911111111111","صف الاعلان العام");
+=======
+		annFeesPage.createAnnAttachWithCaseFirstTime("12541","1", "1", "29911111111111","صف الاعلان العام");
+>>>>>>> 011f2532a7483d49377a5bb1b9f78e5e22b06605
 		
 		Thread.sleep(2000);
 		annPage.getInEntryAnnTab();
@@ -64,7 +68,11 @@ public class AnnouncementTest extends TestBase
 		annPage.getInFollowAnnTab();
 		
 		annStatusPage=new AnnStatusPage(driver);
+<<<<<<< HEAD
 		//annStatusPage.searchOnAnnNum();
+=======
+		annStatusPage.searchOnAnnNum();
+>>>>>>> 011f2532a7483d49377a5bb1b9f78e5e22b06605
 		
 		Thread.sleep(2000);
 		
@@ -78,13 +86,21 @@ public class AnnouncementTest extends TestBase
 	public void creatAnnAttachWithCaseSecondeTimeTest() throws InterruptedException
 	{
 		annFeesPage=new AnnFeesPage(driver);
+<<<<<<< HEAD
 		annFeesPage.createAnnAttachWithCaseForSecondeTime("7100","اعلان عام","29111111111111");
+=======
+		annFeesPage.createAnnAttachWithCaseForSecondeTime("12541","اعلان عام","27811111111111");
+>>>>>>> 011f2532a7483d49377a5bb1b9f78e5e22b06605
 		
 		Thread.sleep(2000);
 		annPage.getInEntryAnnTab();
 		
 		annFrontPage=new AnnFrontPage(driver);
+<<<<<<< HEAD
 		annFrontPage.addDataInAnnouncement("29111111111111");
+=======
+		annFrontPage.addDataInAnnouncement("27811111111111");
+>>>>>>> 011f2532a7483d49377a5bb1b9f78e5e22b06605
 		
 		Thread.sleep(3000);
 		annPage.getInCompleteAnnTab();
@@ -113,13 +129,21 @@ public class AnnouncementTest extends TestBase
 	public  void creatAnnAttachWithOrderFirstTimeTest() throws InterruptedException
 	{
 		annFeesPage=new AnnFeesPage(driver);
+<<<<<<< HEAD
 		annFeesPage.createAnnAttachWithOrderFirstTime("34","1", "1", "29111111111111","صف الاعلان العام");
+=======
+		annFeesPage.createAnnAttachWithOrderFirstTime("18","1", "1", "28711111111111","صف الاعلان العام");
+>>>>>>> 011f2532a7483d49377a5bb1b9f78e5e22b06605
 		
 		Thread.sleep(2000);
 		annPage.getInEntryAnnTab();
 		
 		annFrontPage=new AnnFrontPage(driver);
+<<<<<<< HEAD
 		annFrontPage.addDataInAnnouncement("29111111111111");
+=======
+		annFrontPage.addDataInAnnouncement("28711111111111");
+>>>>>>> 011f2532a7483d49377a5bb1b9f78e5e22b06605
 		
 		Thread.sleep(3000);
 		annPage.getInCompleteAnnTab();
@@ -147,13 +171,21 @@ public class AnnouncementTest extends TestBase
 	public void creatAnnAttachWithOrderSecondeTimeTest() throws InterruptedException
 	{
 		annFeesPage=new AnnFeesPage(driver);
+<<<<<<< HEAD
 		annFeesPage.createAnnAttachWithOrderForSecondeTime("34","اعلان عام","29111111111111");
+=======
+		annFeesPage.createAnnAttachWithOrderForSecondeTime("18","اعلان عام","28711111111111");
+>>>>>>> 011f2532a7483d49377a5bb1b9f78e5e22b06605
 		
 		Thread.sleep(2000);
 		annPage.getInEntryAnnTab();
 		
 		annFrontPage=new AnnFrontPage(driver);
+<<<<<<< HEAD
 		annFrontPage.addDataInAnnouncement("29111111111111");
+=======
+		annFrontPage.addDataInAnnouncement("23911111111111");
+>>>>>>> 011f2532a7483d49377a5bb1b9f78e5e22b06605
 		
 		Thread.sleep(3000);
 		annPage.getInCompleteAnnTab();

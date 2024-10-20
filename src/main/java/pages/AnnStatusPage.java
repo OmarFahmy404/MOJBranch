@@ -39,8 +39,12 @@ public class AnnStatusPage extends PageBase
 		
 		fluentWait(annNumField);
 		 annBack=new AnnBackPage(driver);
+<<<<<<< HEAD
 		 
 		 Thread.sleep(5000);
+=======
+
+>>>>>>> 011f2532a7483d49377a5bb1b9f78e5e22b06605
 		String serialNo = annBack.getAnnSerialNum();
 		setTxtInAnotherWay(annNumField, serialNo);
 		clickBtn(annSearchBtn);

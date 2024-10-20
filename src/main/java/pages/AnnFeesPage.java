@@ -148,7 +148,11 @@ public class AnnFeesPage extends PageBase
 	@FindBy(xpath = "/html/body/ngb-modal-window/div/div/casetypelinkedwithorderwritpopup/div[2]/form/div/div[4]/div/ng-select/div/div/div[2]")
 	WebElement orderClassificationMajor;
 	
+<<<<<<< HEAD
 	@FindBy(xpath = "/html/body/ngb-modal-window/div/div/casetypelinkedwithorderwritpopup/div[2]/form/div/div[4]/div/ng-select/ng-dropdown-panel/div/div[2]/div[2]")
+=======
+	@FindBy(xpath = "/html/body/ngb-modal-window/div/div/casetypelinkedwithorderwritpopup/div[2]/form/div/div[4]/div/ng-select/ng-dropdown-panel/div/div[2]/div[1]")
+>>>>>>> 011f2532a7483d49377a5bb1b9f78e5e22b06605
 	WebElement orderClassificationMinor;
 	
 	@FindBy(xpath = "/html/body/ngb-modal-window/div/div/casetypelinkedwithorderwritpopup/div[2]/form/div/div[5]/div/ng-select/div/div/div[2]")

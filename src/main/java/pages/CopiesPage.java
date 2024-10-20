@@ -32,7 +32,7 @@ public class CopiesPage extends PageBase
 	@FindBy(xpath = "/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/form/div[5]/div[3]/div[1]/ng-select/div/div/div[2]")
 	WebElement rCBeneficiaryOfTheCopyMajor;
 
-	@FindBy(xpath = "/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/form/div[5]/div[3]/div[1]/ng-select/ng-dropdown-panel/div/div[2]/div[1]")
+	@FindBy(xpath = "/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/form/div[5]/div[3]/div[1]/ng-select/ng-dropdown-panel/div/div[2]/div[2]")
 	WebElement rCBeneficiaryOfTheCopyMinor;
 
 	@FindBy(xpath = "/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/form/div[7]/div[2]/table/tbody/tr/td[2]/document-actions/button")
@@ -56,7 +56,7 @@ public class CopiesPage extends PageBase
 	WebElement copyTypeMajor;
 
 
-	@FindBy(xpath = "/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/div/div[2]/table-server/div[2]/div/div[1]/div[5]")
+	@FindBy(xpath = "/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/div/div[2]/table-server/div[2]/div/div[1]/div[4]")
 	WebElement rCOrderNum;
 
 
@@ -102,7 +102,7 @@ public class CopiesPage extends PageBase
 	@FindBy(xpath = "/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/form/div[7]/div[2]/table/tbody/tr[2]/td[2]/document-actions/button")
 	WebElement declarationAddDocBtn;
 
-	@FindBy(xpath = "/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/div/div[2]/table-server/div[2]/div/div[1]/div[4]")
+	@FindBy(xpath = "/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/div/div[2]/table-server/div[2]/div/div[1]/div[5]")
 	WebElement memorialOrderNum;
 
 	@FindBy(xpath = "/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/form/div[1]/div/div[1]/div/ng-select/ng-dropdown-panel/div/div[2]/div[3]")
@@ -145,11 +145,11 @@ public class CopiesPage extends PageBase
 	@FindBy(xpath = "/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/form/div[5]/div[3]/div[1]/ng-select/ng-dropdown-panel/div/div[2]/div[1]")
 	WebElement dFBeneficiaryFPMinor;
 	
-/*
-	@FindBy(xpath = "")
-	WebElement ;
+
+	@FindBy(xpath = "/html/body/ngb-modal-window/div/div/casetypelinkedsearchpopup/div[2]/form/div/div[3]/div/ng-select/ng-dropdown-panel/div/div[2]/div[4]")
+	WebElement classificationTableMinorCompensation;
 	
-	@FindBy(xpath = "")
+	/*@FindBy(xpath = "")
 	WebElement ;
 	
 	@FindBy(xpath = "")
@@ -164,7 +164,7 @@ public class CopiesPage extends PageBase
 		fluentWait(cePageElement.courtMajorElement);
 		setTxt(cePageElement.caseSerialNumberField, serialCaseNum);
 		selectFromDropDownNGList(cePageElement.yearField, cePageElement.yearMinor);
-		selectFromDropDownNGList(cePageElement.classificationTableMajorElement, cePageElement.classificationTableMinorRentals);
+		selectFromDropDownNGList(cePageElement.classificationTableMajorElement,cePageElement.classificationTableMinorRentals);
 		selectFromDropDownNGList(cePageElement.courtMajorElement,cePageElement.courtMinorSouthCairo);
 		clickBtn(cePageElement.searchBtn);
 		Thread.sleep(1500);
@@ -192,7 +192,7 @@ public class CopiesPage extends PageBase
 		fluentWait(cePageElement.courtMajorElement);
 		setTxt(cePageElement.caseSerialNumberField, serialCaseNum);
 		selectFromDropDownNGList(cePageElement.yearField, cePageElement.yearMinor);
-		selectFromDropDownNGList(cePageElement.classificationTableMajorElement, cePageElement.classificationTableMinorRentals);
+		selectFromDropDownNGList(cePageElement.classificationTableMajorElement,cePageElement.classificationTableMinorRentals);
 		selectFromDropDownNGList(cePageElement.courtMajorElement,cePageElement.courtMinorSouthCairo);
 		clickBtn(cePageElement.searchBtn);
 		fluentWait(fromExternalBtn);
@@ -225,7 +225,7 @@ public class CopiesPage extends PageBase
 		fluentWait(cePageElement.courtMajorElement);
 		setTxt(cePageElement.caseSerialNumberField, serialCaseNum);
 		selectFromDropDownNGList(cePageElement.yearField, cePageElement.yearMinor);
-		selectFromDropDownNGList(cePageElement.classificationTableMajorElement, cePageElement.classificationTableMinorRentals);
+		selectFromDropDownNGList(cePageElement.classificationTableMajorElement,cePageElement.classificationTableMinorRentals);
 		selectFromDropDownNGList(cePageElement.courtMajorElement,cePageElement.courtMinorSouthCairo);
 		clickBtn(cePageElement.searchBtn);
 		fluentWait(officialJudgeTempMajor);
@@ -255,7 +255,7 @@ public class CopiesPage extends PageBase
 		fluentWait(cePageElement.courtMajorElement);
 		setTxt(cePageElement.caseSerialNumberField, serialCaseNum);
 		selectFromDropDownNGList(cePageElement.yearField, cePageElement.yearMinor);
-		selectFromDropDownNGList(cePageElement.classificationTableMajorElement, cePageElement.classificationTableMinorRentals);
+		selectFromDropDownNGList(cePageElement.classificationTableMajorElement,cePageElement.classificationTableMinorRentals);
 		selectFromDropDownNGList(cePageElement.courtMajorElement,cePageElement.courtMinorSouthCairo);
 		clickBtn(cePageElement.searchBtn);
 		fluentWait(documentFoldersMajor);
@@ -320,8 +320,7 @@ public class CopiesPage extends PageBase
 		setTxtInAnotherWay(requesterNumberField, xx[1]);
 		fluentWait(searchBtn);
 		clickBtn(searchBtn);
-		fluentWait(copyDelivery);
-		Thread.sleep(2500);
+		Thread.sleep(3000);
 		clickBtn(copyDelivery);
 
 	}

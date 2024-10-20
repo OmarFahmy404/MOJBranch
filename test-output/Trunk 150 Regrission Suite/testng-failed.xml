@@ -14,6 +14,7 @@
           <include name="recordCaseCopyTest"/>
         </methods>
       </class> <!-- tests.CopiesTest -->
+<<<<<<< HEAD
       <class name="tests.AnnouncementTest">
         <methods>
           <include name="creatAnnAttachWithOrderSecondeTimeTest"/>
@@ -38,6 +39,18 @@
           <include name="creatAnnAttachWithCaseSecondeTimeTest"/>
         </methods>
       </class> <!-- tests.WarningsTest -->
+=======
+      <class name="tests.CertificatesTest">
+        <methods>
+          <include name="startDriver"/>
+          <include name="completeSessionCasesCertProcess"/>
+          <include name="getInCertificatesPage"/>
+          <include name="stopDriver"/>
+          <include name="screenshotOnFailure"/>
+          <include name="completeBrotestoCase"/>
+        </methods>
+      </class> <!-- tests.CertificatesTest -->
+>>>>>>> 011f2532a7483d49377a5bb1b9f78e5e22b06605
     </classes>
   </test> <!-- Regrission Test(failed) -->
 </suite> <!-- Failed suite [Trunk 150 Regrission Suite] -->

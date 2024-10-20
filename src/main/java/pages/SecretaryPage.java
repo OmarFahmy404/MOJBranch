@@ -11,7 +11,11 @@ public class SecretaryPage extends PageBase
 		super(driver);
 	}
 
+<<<<<<< HEAD
 	@FindBy(xpath = "/html/body/app-root/block-ui/div/inner-container/main/app-menu/div/div[2]/ul/li[18]/a")
+=======
+	@FindBy(xpath = "/html/body/app-root/block-ui/div/inner-container/main/app-menu/div/div[2]/ul/li[9]/a")
+>>>>>>> 011f2532a7483d49377a5bb1b9f78e5e22b06605
 	public
 	WebElement feesAdmAnnTab;
 	

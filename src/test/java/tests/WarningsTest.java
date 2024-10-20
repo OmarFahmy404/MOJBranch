@@ -45,13 +45,21 @@ public class WarningsTest extends TestBase
 	public void creatWarAttachWithCaseFirstTimeTest() throws InterruptedException
 	{
 		warFees=new WarningsFeesPage(driver);
+<<<<<<< HEAD
 		warFees.createWarAttachWithCaseFirstTime("7100","1", "1", "29911111111111","صف الاعلان العام");
+=======
+		warFees.createWarAttachWithCaseFirstTime("12541","1", "1", "29911111111111","صف الاعلان العام");
+>>>>>>> 011f2532a7483d49377a5bb1b9f78e5e22b06605
 		
 		Thread.sleep(2000);
 		warPage.getInFrontWarningsTab();
 		
 		warFront=new WarningsFrontPage(driver);
+<<<<<<< HEAD
 		warFront.addDataInWarnings("28111111111111");
+=======
+		warFront.addDataInWarnings("28711111111111");
+>>>>>>> 011f2532a7483d49377a5bb1b9f78e5e22b06605
 		
 		Thread.sleep(3000);
 		warPage.getInBackWarningsTab();
@@ -81,13 +89,21 @@ public class WarningsTest extends TestBase
 	public void creatAnnAttachWithCaseSecondeTimeTest() throws InterruptedException
 	{
 		warFees=new WarningsFeesPage(driver);
+<<<<<<< HEAD
 		warFees.createWarAttachWithCaseForSecondeTime("7100","اعلان عام","27811111111111");
+=======
+		warFees.createWarAttachWithCaseForSecondeTime("12541","اعلان عام","27811111111111");
+>>>>>>> 011f2532a7483d49377a5bb1b9f78e5e22b06605
 		
 		Thread.sleep(2000);
 		warPage.getInFrontWarningsTab();
 		
 		warFront=new WarningsFrontPage(driver);
+<<<<<<< HEAD
 		warFront.addDataInWarnings("27111111111111");
+=======
+		warFront.addDataInWarnings("27811111111111");
+>>>>>>> 011f2532a7483d49377a5bb1b9f78e5e22b06605
 		
 		Thread.sleep(3000);
 		warPage.getInBackWarningsTab();
@@ -116,13 +132,21 @@ public class WarningsTest extends TestBase
 	public  void creatWarAttachWithOrderFirstTimeTest() throws InterruptedException
 	{
 		warFees=new WarningsFeesPage(driver);
+<<<<<<< HEAD
 		warFees.createWarAttachWithOrderFirstTime("34","1", "1", "28111111111111","صف الاعلان العام");
+=======
+		warFees.createWarAttachWithOrderFirstTime("18","1", "1", "28711111111111","صف الاعلان العام");
+>>>>>>> 011f2532a7483d49377a5bb1b9f78e5e22b06605
 		
 		Thread.sleep(2000);
 		warPage.getInFrontWarningsTab();
 		
 		warFront=new WarningsFrontPage(driver);
+<<<<<<< HEAD
 		warFront.addDataInWarnings("27111111111111");
+=======
+		warFront.addDataInWarnings("28711111111111");
+>>>>>>> 011f2532a7483d49377a5bb1b9f78e5e22b06605
 		
 		Thread.sleep(3000);
 		warPage.getInBackWarningsTab();
@@ -150,13 +174,21 @@ public class WarningsTest extends TestBase
 	public void creatWarAttachWithOrderSecondeTimeTest() throws InterruptedException
 	{
 		warFees=new WarningsFeesPage(driver);
+<<<<<<< HEAD
 		warFees.createWarAttachWithOrderForSecondeTime("34","اعلان عام","28111111111111");
+=======
+		warFees.createWarAttachWithOrderForSecondeTime("18","اعلان عام","28711111111111");
+>>>>>>> 011f2532a7483d49377a5bb1b9f78e5e22b06605
 		
 		Thread.sleep(2000);
 		warPage.getInFrontWarningsTab();
 		
 		warFront=new WarningsFrontPage(driver);
+<<<<<<< HEAD
 		warFront.addDataInWarnings("29111111111111");
+=======
+		warFront.addDataInWarnings("23911111111111");
+>>>>>>> 011f2532a7483d49377a5bb1b9f78e5e22b06605
 		
 		Thread.sleep(3000);
 		warPage.getInBackWarningsTab();

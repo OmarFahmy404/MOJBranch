@@ -34,9 +34,15 @@ public class AdministrativeAnnTest extends TestBase
 	public void adminsitrartiveAnnProcessTest() throws InterruptedException 
 	{
 		admAnnPage=new AdministrativeAnnFeesPage(driver);
+<<<<<<< HEAD
 		admAnnPage.caseAdmAnnFeesProcess("7100");
 		SoftAssert sAssert= new SoftAssert();
 		sAssert.assertTrue(driver.getCurrentUrl().equals("http://10.9.100.150/#/adminstrative-announcements"));
+=======
+		admAnnPage.caseAdmAnnFeesProcess("12541");
+		SoftAssert sAssert= new SoftAssert();
+		sAssert.assertTrue(driver.getCurrentUrl().equals("http://10.0.10.58:9091/#/adminstrative-announcements"));
+>>>>>>> 011f2532a7483d49377a5bb1b9f78e5e22b06605
 		sAssert.assertTrue(admAnnPage.annTypeTxt.getText().contains("قرار إعادة للمرافعة"));
 		
 		
@@ -54,9 +60,15 @@ public class AdministrativeAnnTest extends TestBase
 	public void adminsitrartiveOrderProcessTest() throws InterruptedException 
 	{
 		admAnnPage=new AdministrativeAnnFeesPage(driver);
+<<<<<<< HEAD
 		admAnnPage.orderAdmAnnFeesProcess("34");
 		SoftAssert sAssert= new SoftAssert();
 		sAssert.assertTrue(driver.getCurrentUrl().equals("http://10.9.100.150/#/adminstrative-announcements"));
+=======
+		admAnnPage.orderAdmAnnFeesProcess("19");
+		SoftAssert sAssert= new SoftAssert();
+		sAssert.assertTrue(driver.getCurrentUrl().equals("http://10.0.10.58:9091/#/adminstrative-announcements"));
+>>>>>>> 011f2532a7483d49377a5bb1b9f78e5e22b06605
 		sAssert.assertTrue(admAnnPage.annTypeTxt.getText().contains("اعادة اعلان"));
 		
 		

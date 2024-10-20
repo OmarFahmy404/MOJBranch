@@ -3,12 +3,17 @@
 <suite name="Failed suite [Trunk 150 Regrission Suite]">
   <test thread-count="5" name="Regrission Test(failed)">
     <classes>
+<<<<<<< HEAD
       <class name="tests.CopiesTest">
+=======
+      <class name="tests.PublicHearingOfInvestigationTest">
+>>>>>>> 011f2532a7483d49377a5bb1b9f78e5e22b06605
         <methods>
           <include name="copyFromTheFrontOfTheCaseTest"/>
           <include name="startDriver"/>
-          <include name="getInCertificatesPage"/>
+          <include name="LoginAndGetInThePage"/>
           <include name="stopDriver"/>
+<<<<<<< HEAD
           <include name="officialJudCopyTest"/>
           <include name="screenshotOnFailure"/>
           <include name="recordCaseCopyTest"/>
@@ -38,6 +43,12 @@
           <include name="creatAnnAttachWithCaseSecondeTimeTest"/>
         </methods>
       </class> <!-- tests.WarningsTest -->
+=======
+          <include name="finishTheHearingOfInvestigationProcessTest"/>
+          <include name="screenshotOnFailure"/>
+        </methods>
+      </class> <!-- tests.PublicHearingOfInvestigationTest -->
+>>>>>>> 011f2532a7483d49377a5bb1b9f78e5e22b06605
     </classes>
   </test> <!-- Regrission Test(failed) -->
 </suite> <!-- Failed suite [Trunk 150 Regrission Suite] -->

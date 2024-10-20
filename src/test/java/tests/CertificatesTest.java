@@ -31,7 +31,7 @@ public class CertificatesTest extends TestBase
 	@Test(priority = 1)
 	public void completeSessionCasesCertProcess() throws InterruptedException
 	{
-		certPage.sessionCaseType("3170", "سبب الاعفاء");
+		certPage.sessionCaseType("12541", "سبب الاعفاء");
 		SoftAssert sAssert=new SoftAssert();
 		sAssert.assertTrue(CertificatesPage.displayTheCertificateBtn.isEnabled(),"The Certification Button is Displayed");
 		sAssert.assertAll();
@@ -54,6 +54,7 @@ public class CertificatesTest extends TestBase
 		sAssert.assertTrue(CertificatesPage.tGdisplayTheCertificateBtn.isEnabled(),"The Certification Button is Displayed");
 		sAssert.assertAll();
 		Thread.sleep(2000);
+
 
 	}
 	@Test(priority = 4)

@@ -34,9 +34,11 @@ public class CopiesTest extends TestBase
 	@Test(priority = 1)
 	public void recordCaseCopyTest() throws InterruptedException
 	{
-		copiesPage.recordeCase("1280");
+		copiesPage.recordeCase("12541");
 		PageBase.fluentWait(copiesPage.deliverTheCopy);
 		SoftAssert sAssert=new SoftAssert();
+		Thread.sleep(2000);
+
 		sAssert.assertFalse(copiesPage.deliverTheCopy.isEnabled(),"The Copy Deliver Button is Not Enabled");
 		sAssert.assertTrue(CopiesPage.theCopy.isDisplayed(),"The Copy Button is Displayed");
 		sAssert.assertAll();
@@ -46,10 +48,14 @@ public class CopiesTest extends TestBase
 	@Test(priority = 2)
 	public void memorialCopyTest() throws InterruptedException
 	{
-		copiesPage.memorialCopy("1280", "28711111111111");
+		copiesPage.memorialCopy("12541", "28711111111111");
 		PageBase.fluentWait(copiesPage.deliverTheCopy);
 		SoftAssert sAssert=new SoftAssert();
+<<<<<<< HEAD
 		Thread.sleep(4000);
+=======
+		Thread.sleep(2000);
+>>>>>>> 011f2532a7483d49377a5bb1b9f78e5e22b06605
 		sAssert.assertFalse(copiesPage.deliverTheCopy.isEnabled(),"The Copy Deliver Button is Not Enabled");
 		sAssert.assertTrue(CopiesPage.theCopy.isDisplayed(),"The Copy Button is Displayed");
 		sAssert.assertAll();
@@ -60,7 +66,7 @@ public class CopiesTest extends TestBase
 	@Test(priority = 3)
 	public void officialJudCopyTest() throws InterruptedException
 	{
-		copiesPage.theOfficialJudgementCopy("1280");
+		copiesPage.theOfficialJudgementCopy("12542");
 		PageBase.fluentWait(copiesPage.deliverTheCopy);
 		SoftAssert sAssert=new SoftAssert();
 		sAssert.assertFalse(copiesPage.deliverTheCopy.isEnabled(),"The Copy Deliver Button is Not Enabled");
@@ -73,7 +79,7 @@ public class CopiesTest extends TestBase
 	@Test(priority = 4)
 	public void copyFromTheFrontOfTheCaseTest() throws InterruptedException
 	{
-		copiesPage.copyFromTheFrontOfTheCase("2180");
+		copiesPage.copyFromTheFrontOfTheCase("12541");
 		PageBase.fluentWait(copiesPage.deliverTheCopy);
 		SoftAssert sAssert=new SoftAssert();
 		sAssert.assertFalse(copiesPage.deliverTheCopy.isEnabled(),"The Copy Deliver Button is Not Enabled");

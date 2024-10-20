@@ -3,15 +3,28 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
+<<<<<<< HEAD
       <class name="tests.WarningsTest">
+=======
+      <class name="tests.PublicHearingOfInvestigationTest">
+>>>>>>> 011f2532a7483d49377a5bb1b9f78e5e22b06605
         <methods>
           <include name="creatWarAttachWithOrderSecondeTimeTest"/>
           <include name="startDriver"/>
+<<<<<<< HEAD
           <include name="loginAndGetInAnnPart"/>
+=======
+          <include name="LoginAndGetInThePage"/>
+>>>>>>> 011f2532a7483d49377a5bb1b9f78e5e22b06605
           <include name="stopDriver"/>
+          <include name="finishTheHearingOfInvestigationProcessTest"/>
           <include name="screenshotOnFailure"/>
         </methods>
+<<<<<<< HEAD
       </class> <!-- tests.WarningsTest -->
+=======
+      </class> <!-- tests.PublicHearingOfInvestigationTest -->
+>>>>>>> 011f2532a7483d49377a5bb1b9f78e5e22b06605
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
