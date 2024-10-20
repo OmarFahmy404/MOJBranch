@@ -37,7 +37,7 @@ public class CertificatesPage extends PageBase
 	WebElement yearMinor;
 	@FindBy(xpath = "/html/body/ngb-modal-window/div/div/casetypelinkedsearchpopup/div[2]/form/div/div[3]/div/ng-select/div")
 	WebElement classificationTableMajorElement;
-	@FindBy(xpath = "/html/body/ngb-modal-window/div/div/casetypelinkedsearchpopup/div[2]/form/div/div[3]/div/ng-select/ng-dropdown-panel/div/div[2]/div[3]")
+	@FindBy(xpath = "/html/body/ngb-modal-window/div/div/casetypelinkedsearchpopup/div[2]/form/div/div[3]/div/ng-select/ng-dropdown-panel/div/div[2]/div[6]")
 	WebElement classificationTableMinorRentals;
 	@FindBy(xpath = "/html/body/ngb-modal-window/div/div/casetypelinkedsearchpopup/div[2]/form/div/div[4]/div/ng-select/div/div/div[2]")
 	WebElement courtMajorElement;
@@ -136,9 +136,10 @@ public class CertificatesPage extends PageBase
 	WebElement tGvalidityOfTheAdditionalContent;
 	@FindBy(xpath = "/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/form/div[6]/button[1]")
 	WebElement  tGviewFeeReceiptBtn;
-	@FindBy(xpath = "")
+	@FindBy(xpath = "/html/body/ngb-modal-window/div/div/ng-component/div[3]/div/div[1]/button")
 	WebElement  tGissuingTheReceiptBtn;                                  ///////////////////
-	@FindBy(xpath = "")
+	@FindBy(xpath = "/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/form/div[6]/button[3]")
+	public static
 	WebElement  tGdisplayTheCertificateBtn;                              ///////////////////
 	@FindBy(name="plaintiffName")
 	WebElement caseBy;
@@ -274,9 +275,9 @@ public class CertificatesPage extends PageBase
 		uploadPdf(tGvalidityOfTheAdditionalContent, selectFeeExemptionDocumentbtn, saveFeeExemptionDocumentbtn);
 		Thread.sleep(9000);
 		clickBtn(tGviewFeeReceiptBtn);
-		fluentWait(tGissuingTheReceiptBtn);
+		Thread.sleep(2000);
 		clickBtn(tGissuingTheReceiptBtn);
-		fluentWait(tGdisplayTheCertificateBtn);
+		Thread.sleep(2000);
 		clickBtn(tGdisplayTheCertificateBtn);
 	}
 	public void caseDoesNotExist(String benfcNormalPersonId, String caseByWhome, String s_e_month , String extraContent , String exemptionReason) throws InterruptedException

@@ -1,17 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Default test(failed)">
+<suite name="Failed suite [Trunk 150 Regrission Suite]">
+  <test thread-count="5" name="Regrission Test(failed)">
     <classes>
-      <class name="tests.CertificatesTest">
+      <class name="tests.CopiesTest">
         <methods>
+          <include name="copyFromTheFrontOfTheCaseTest"/>
           <include name="startDriver"/>
           <include name="getInCertificatesPage"/>
           <include name="stopDriver"/>
+          <include name="officialJudCopyTest"/>
           <include name="screenshotOnFailure"/>
-          <include name="completeBrotestoCase"/>
+          <include name="recordCaseCopyTest"/>
         </methods>
-      </class> <!-- tests.CertificatesTest -->
+      </class> <!-- tests.CopiesTest -->
+      <class name="tests.AnnouncementTest">
+        <methods>
+          <include name="creatAnnAttachWithOrderSecondeTimeTest"/>
+          <include name="startDriver"/>
+          <include name="creatAnnAttachWithOrderFirstTimeTest"/>
+          <include name="creatAnnAttachWithCaseSecondeTimeTest"/>
+          <include name="stopDriver"/>
+          <include name="loginAndGetInAnnPart"/>
+          <include name="screenshotOnFailure"/>
+          <include name="creatAnnAttachWithCaseFirstTimeTest"/>
+        </methods>
+      </class> <!-- tests.AnnouncementTest -->
+      <class name="tests.WarningsTest">
+        <methods>
+          <include name="creatWarAttachWithOrderSecondeTimeTest"/>
+          <include name="startDriver"/>
+          <include name="loginAndGetInAnnPart"/>
+          <include name="creatWarAttachWithOrderFirstTimeTest"/>
+          <include name="stopDriver"/>
+          <include name="creatWarAttachWithCaseFirstTimeTest"/>
+          <include name="screenshotOnFailure"/>
+          <include name="creatAnnAttachWithCaseSecondeTimeTest"/>
+        </methods>
+      </class> <!-- tests.WarningsTest -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Regrission Test(failed) -->
+</suite> <!-- Failed suite [Trunk 150 Regrission Suite] -->

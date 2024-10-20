@@ -3,21 +3,10 @@
 <suite name="Failed suite [Trunk 150 Regrission Suite]">
   <test thread-count="5" name="Regrission Test(failed)">
     <classes>
-      <class name="tests.CertificatesTest">
-        <methods>
-          <include name="terroristGroupsCase"/>
-          <include name="getInCertificatesPage"/>
-          <include name="startDriver"/>
-          <include name="stopDriver"/>
-          <include name="screenshotOnFailure"/>
-          <include name="completeBrotestoCase"/>
-        </methods>
-      </class> <!-- tests.CertificatesTest -->
       <class name="tests.CopiesTest">
         <methods>
           <include name="copyFromTheFrontOfTheCaseTest"/>
           <include name="startDriver"/>
-          <include name="memorialCopyTest"/>
           <include name="getInCertificatesPage"/>
           <include name="stopDriver"/>
           <include name="officialJudCopyTest"/>
@@ -25,6 +14,30 @@
           <include name="recordCaseCopyTest"/>
         </methods>
       </class> <!-- tests.CopiesTest -->
+      <class name="tests.AnnouncementTest">
+        <methods>
+          <include name="creatAnnAttachWithOrderSecondeTimeTest"/>
+          <include name="startDriver"/>
+          <include name="creatAnnAttachWithOrderFirstTimeTest"/>
+          <include name="creatAnnAttachWithCaseSecondeTimeTest"/>
+          <include name="stopDriver"/>
+          <include name="loginAndGetInAnnPart"/>
+          <include name="screenshotOnFailure"/>
+          <include name="creatAnnAttachWithCaseFirstTimeTest"/>
+        </methods>
+      </class> <!-- tests.AnnouncementTest -->
+      <class name="tests.WarningsTest">
+        <methods>
+          <include name="creatWarAttachWithOrderSecondeTimeTest"/>
+          <include name="startDriver"/>
+          <include name="loginAndGetInAnnPart"/>
+          <include name="creatWarAttachWithOrderFirstTimeTest"/>
+          <include name="stopDriver"/>
+          <include name="creatWarAttachWithCaseFirstTimeTest"/>
+          <include name="screenshotOnFailure"/>
+          <include name="creatAnnAttachWithCaseSecondeTimeTest"/>
+        </methods>
+      </class> <!-- tests.WarningsTest -->
     </classes>
   </test> <!-- Regrission Test(failed) -->
 </suite> <!-- Failed suite [Trunk 150 Regrission Suite] -->

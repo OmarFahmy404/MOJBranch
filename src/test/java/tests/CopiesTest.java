@@ -49,6 +49,7 @@ public class CopiesTest extends TestBase
 		copiesPage.memorialCopy("1280", "28711111111111");
 		PageBase.fluentWait(copiesPage.deliverTheCopy);
 		SoftAssert sAssert=new SoftAssert();
+		Thread.sleep(4000);
 		sAssert.assertFalse(copiesPage.deliverTheCopy.isEnabled(),"The Copy Deliver Button is Not Enabled");
 		sAssert.assertTrue(CopiesPage.theCopy.isDisplayed(),"The Copy Button is Displayed");
 		sAssert.assertAll();

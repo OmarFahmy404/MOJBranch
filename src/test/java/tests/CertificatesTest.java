@@ -51,8 +51,9 @@ public class CertificatesTest extends TestBase
 	{
 		certPage.terroristGroups("28711111111111", "محتوي اضافي" ,"سبب الاعفاء");
 		SoftAssert sAssert=new SoftAssert();
-		sAssert.assertTrue(CertificatesPage.displayTheCertificateBtn.isEnabled(),"The Certification Button is Displayed");
+		sAssert.assertTrue(CertificatesPage.tGdisplayTheCertificateBtn.isEnabled(),"The Certification Button is Displayed");
 		sAssert.assertAll();
+		Thread.sleep(2000);
 
 	}
 	@Test(priority = 4)

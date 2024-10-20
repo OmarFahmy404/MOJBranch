@@ -8,23 +8,75 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="8">Default suite</th></tr>
-<tr><td><a href="#t0">Default test</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">55,587</td><td></td><td></td></tr>
+<tr><th colspan="8">Trunk 150 Regrission Suite</th></tr>
+<tr><td><a href="#t0">Regrission Test</a></td><td class="num">5</td><td class="num">0</td><td class="num">0</td><td class="num attn">11</td><td class="num">868,077</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">tests.CertificatesTest</td><td><a href="#m0">completeBrotestoCase</a></td><td rowspan="1">1724573085850</td><td rowspan="1">33311</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Trunk 150 Regrission Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Regrission Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="4">tests.AnnouncementTest</td><td><a href="#m0">creatAnnAttachWithCaseFirstTimeTest</a></td><td rowspan="1">1728307543205</td><td rowspan="1">38052</td></tr><tr class="failedeven"><td><a href="#m1">creatAnnAttachWithCaseSecondeTimeTest</a></td><td rowspan="1">1728307595007</td><td rowspan="1">40421</td></tr><tr class="failedeven"><td><a href="#m2">creatAnnAttachWithOrderFirstTimeTest</a></td><td rowspan="1">1728307649184</td><td rowspan="1">37643</td></tr><tr class="failedeven"><td><a href="#m3">creatAnnAttachWithOrderSecondeTimeTest</a></td><td rowspan="1">1728307700579</td><td rowspan="1">38527</td></tr><tr class="failedodd"><td rowspan="3">tests.CopiesTest</td><td><a href="#m4">copyFromTheFrontOfTheCaseTest</a></td><td rowspan="1">1728307299749</td><td rowspan="1">53099</td></tr><tr class="failedodd"><td><a href="#m5">officialJudCopyTest</a></td><td rowspan="1">1728307233513</td><td rowspan="1">52467</td></tr><tr class="failedodd"><td><a href="#m6">recordCaseCopyTest</a></td><td rowspan="1">1728307089437</td><td rowspan="1">53143</td></tr><tr class="failedeven"><td rowspan="4">tests.WarningsTest</td><td><a href="#m7">creatAnnAttachWithCaseSecondeTimeTest</a></td><td rowspan="1">1728307418394</td><td rowspan="1">3896</td></tr><tr class="failedeven"><td><a href="#m8">creatWarAttachWithCaseFirstTimeTest</a></td><td rowspan="1">1728307366607</td><td rowspan="1">37980</td></tr><tr class="failedeven"><td><a href="#m9">creatWarAttachWithOrderFirstTimeTest</a></td><td rowspan="1">1728307438049</td><td rowspan="1">38411</td></tr><tr class="failedeven"><td><a href="#m10">creatWarAttachWithOrderSecondeTimeTest</a></td><td rowspan="1">1728307490261</td><td rowspan="1">39199</td></tr><tr><th colspan="4">Regrission Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="4">tests.CertificatesTest</td><td><a href="#m11">caseNoExist</a></td><td rowspan="1">1728307044590</td><td rowspan="1">33870</td></tr><tr class="passedeven"><td><a href="#m12">completeBrotestoCase</a></td><td rowspan="1">1728306946624</td><td rowspan="1">37579</td></tr><tr class="passedeven"><td><a href="#m13">completeSessionCasesCertProcess</a></td><td rowspan="1">1728306894643</td><td rowspan="1">40995</td></tr><tr class="passedeven"><td><a href="#m14">terroristGroupsCase</a></td><td rowspan="1">1728306995180</td><td rowspan="1">38437</td></tr><tr class="passedodd"><td rowspan="1">tests.CopiesTest</td><td><a href="#m15">memorialCopyTest</a></td><td rowspan="1">1728307156411</td><td rowspan="1">66463</td></tr></tbody>
 </table>
-<h2>Default test</h2><h3 id="m0">tests.CertificatesTest#completeBrotestoCase</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;/html/body/ngb-modal-window/div/div/ng-component/div[3]/div/div[1]/button&quot;}
-  (Session info: chrome=127.0.6533.122)
+<h2>Regrission Test</h2><h3 id="m0">tests.AnnouncementTest#creatAnnAttachWithCaseFirstTimeTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: The following asserts failed:
+	the change of the announcement status expected [true] but found [false]
+	at tests.AnnouncementTest.creatAnnAttachWithCaseFirstTimeTest(AnnouncementTest.java:73)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 27 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">tests.AnnouncementTest#creatAnnAttachWithCaseSecondeTimeTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: The following asserts failed:
+	the change of the announcement status expected [true] but found [false]
+	at tests.AnnouncementTest.creatAnnAttachWithCaseSecondeTimeTest(AnnouncementTest.java:109)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 27 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">tests.AnnouncementTest#creatAnnAttachWithOrderFirstTimeTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: The following asserts failed:
+	the change of the announcement status expected [true] but found [false]
+	at tests.AnnouncementTest.creatAnnAttachWithOrderFirstTimeTest(AnnouncementTest.java:143)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 27 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">tests.AnnouncementTest#creatAnnAttachWithOrderSecondeTimeTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;a data-toggle=&quot;tooltip&quot; data-placement=&quot;left&quot; data-trigger=&quot;hover&quot; id=&quot;menu-item&quot; title=&quot;متابعة حالة الإعلانات&quot; href=&quot;#/announcement-status-list/1&quot;&gt;...&lt;/a&gt; is not clickable at point (1458, 173). Other element would receive the click: &lt;div class=&quot;swal2-container swal2-rtl swal2-center swal2-backdrop-show&quot; style=&quot;overflow-y: auto;&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=129.0.6668.60)
+Build info: version: &apos;4.23.0&apos;, revision: &apos;4df0a231af&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;22.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [d0a41ee4b6b53926f3400a633de140f5, clickElement {id=f.12507BD6B497D24EEE1938BB38034DDF.d.943903024B272256F2CFF58C36DEE02A.e.6753}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.60, chrome: {chromedriverVersion: 129.0.6668.89 (951c0b97221f..., userDataDir: C:\Users\ofahmy\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59533}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59533/devtoo..., se:cdpVersion: 129.0.6668.60, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (d0a41ee4b6b53926f3400a633de140f5)] -&gt; xpath: /html/body/app-root/block-ui/div/inner-container/main/app-menu/div/div[2]/ul/li[2]/a]
+Session ID: d0a41ee4b6b53926f3400a633de140f5
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy17.click(Unknown Source)
+	at pages.PageBase.clickBtn(PageBase.java:61)
+	at pages.AnnouncementPage.getInFollowAnnTab(AnnouncementPage.java:50)
+	at tests.AnnouncementTest.creatAnnAttachWithOrderSecondeTimeTest(AnnouncementTest.java:169)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 30 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">tests.CopiesTest#copyFromTheFrontOfTheCaseTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: The following asserts failed:
+	The Copy Deliver Button is Not Enabled expected [false] but found [true]
+	at tests.CopiesTest.copyFromTheFrontOfTheCaseTest(CopiesTest.java:81)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 27 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">tests.CopiesTest#officialJudCopyTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: The following asserts failed:
+	The Copy Deliver Button is Not Enabled expected [false] but found [true]
+	at tests.CopiesTest.officialJudCopyTest(CopiesTest.java:68)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 27 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">tests.CopiesTest#recordCaseCopyTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: The following asserts failed:
+	The Copy Deliver Button is Not Enabled expected [false] but found [true]
+	at tests.CopiesTest.recordCaseCopyTest(CopiesTest.java:42)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 27 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m7">tests.WarningsTest#creatAnnAttachWithCaseSecondeTimeTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/form/div[2]/div[2]/div[2]/div[2]/div[2]/div/div/ng-select/ng-dropdown-panel/div/div[2]/div[4]&quot;}
+  (Session info: chrome=129.0.6668.60)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: &apos;4.23.0&apos;, revision: &apos;4df0a231af&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;22.0.2&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [10c9228649a163be9b89146bc2c5a595, findElement {using=xpath, value=/html/body/ngb-modal-window/div/div/ng-component/div[3]/div/div[1]/button}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.122, chrome: {chromedriverVersion: 127.0.6533.88 (a2d0cb026721..., userDataDir: C:\Users\ofahmy\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57743}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57743/devtoo..., se:cdpVersion: 127.0.6533.122, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 10c9228649a163be9b89146bc2c5a595
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+Command: [d0a41ee4b6b53926f3400a633de140f5, findElement {using=xpath, value=/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/form/div[2]/div[2]/div[2]/div[2]/div[2]/div/div/ng-select/ng-dropdown-panel/div/div[2]/div[4]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.60, chrome: {chromedriverVersion: 129.0.6668.89 (951c0b97221f..., userDataDir: C:\Users\ofahmy\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59533}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59533/devtoo..., se:cdpVersion: 129.0.6668.60, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: d0a41ee4b6b53926f3400a633de140f5
 	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
@@ -39,35 +91,30 @@ Session ID: 10c9228649a163be9b89146bc2c5a595
 	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
 	at jdk.proxy2/jdk.proxy2.$Proxy17.click(Unknown Source)
-	at pages.PageBase.clickBtn(PageBase.java:61)
-	at pages.CertificatesPage.constraintNonConstraintBrotesto(CertificatesPage.java:251)
-	at tests.CertificatesTest.completeBrotestoCase(CertificatesTest.java:43)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at pages.PageBase.selectFromDropDownNGList(PageBase.java:94)
+	at pages.WarningsFeesPage.createWarAttachWithCaseForSecondeTime(WarningsFeesPage.java:234)
+	at tests.WarningsTest.creatAnnAttachWithCaseSecondeTimeTest(WarningsTest.java:84)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-	at org.testng.TestRunner.privateRun(TestRunner.java:829)
-	at org.testng.TestRunner.run(TestRunner.java:602)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-	at org.testng.TestNG.runSuites(TestNG.java:1099)
-	at org.testng.TestNG.run(TestNG.java:1067)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+... Removed 28 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m8">tests.WarningsTest#creatWarAttachWithCaseFirstTimeTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: The following asserts failed:
+	the change of the announcement status expected [true] but found [false]
+	at tests.WarningsTest.creatWarAttachWithCaseFirstTimeTest(WarningsTest.java:76)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 27 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m9">tests.WarningsTest#creatWarAttachWithOrderFirstTimeTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: The following asserts failed:
+	the change of the announcement status expected [true] but found [false]
+	at tests.WarningsTest.creatWarAttachWithOrderFirstTimeTest(WarningsTest.java:146)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 27 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m10">tests.WarningsTest#creatWarAttachWithOrderSecondeTimeTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: The following asserts failed:
+	the change of the announcement status expected [true] but found [false]
+	at tests.WarningsTest.creatWarAttachWithOrderSecondeTimeTest(WarningsTest.java:181)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 27 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m11">tests.CertificatesTest#caseNoExist</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m12">tests.CertificatesTest#completeBrotestoCase</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m13">tests.CertificatesTest#completeSessionCasesCertProcess</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m14">tests.CertificatesTest#terroristGroupsCase</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m15">tests.CopiesTest#memorialCopyTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

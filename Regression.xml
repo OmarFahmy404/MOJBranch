@@ -3,6 +3,8 @@
 <classes>
 <class name="tests.CertificatesTest"/>
 <class name="tests.CopiesTest"/>
+<class name="tests.WarningsTest"/>
+<class name="tests.AnnouncementTest"/>
 </classes>
 </test>
 </suite>

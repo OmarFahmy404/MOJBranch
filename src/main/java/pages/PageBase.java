@@ -52,7 +52,7 @@ public class PageBase
 	@FindBy(xpath = "/html/body/app-root/block-ui/div/inner-container/main/div/app-header/div/div/ul[2]/li/div")
 	static
 	WebElement userAcc;
-	@FindBy(xpath = "/html/body/app-root/block-ui/div/inner-container/main/div/app-header/div/div/ul[2]/li/div/div/a[4]")
+	@FindBy(xpath = "/html/body/app-root/block-ui/div/inner-container/main/div/app-header/div/div/ul[2]/li/div/div/a[3]")
 	static
 	WebElement logOutBtn;
 	
