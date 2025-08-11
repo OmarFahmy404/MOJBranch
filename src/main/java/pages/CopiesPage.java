@@ -4,8 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class CopiesPage extends PageBase
-{
+public class CopiesPage extends PageBase {
 
 	CertificatesPage cePageElement;
 	TreasuryPage treasuryPage;
@@ -13,10 +12,8 @@ public class CopiesPage extends PageBase
 	public CopiesPage(WebDriver driver) {
 		super(driver);
 		cePageElement = new CertificatesPage(driver);
-		treasuryPage=new TreasuryPage(driver);
+		treasuryPage = new TreasuryPage(driver);
 	}
-
-
 
 	@FindBy(xpath = "/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/form/div[1]/div/div[1]/div/ng-select/ng-dropdown-panel/div/div[2]/div[1]")
 	WebElement recordeCaseMinorCopy;
@@ -24,26 +21,22 @@ public class CopiesPage extends PageBase
 	@FindBy(name = "hearingDate")
 	WebElement rCDataRecordCaseMajor;
 
-
-	@FindBy(xpath ="/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/form/div[4]/div/div[1]/div/ng-select/ng-dropdown-panel/div/div[2]/div[1]")
+	@FindBy(xpath = "/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/form/div[3]/div/div[1]/div/ng-select/ng-dropdown-panel/div/div[2]/div[1]")
 	WebElement rCFirstDataRecordCaseMinor;
 
-
-	@FindBy(xpath = "/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/form/div[5]/div[3]/div[1]/ng-select/div/div/div[2]")
+	@FindBy(xpath = "/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/form/div[4]/div[3]/div[1]/ng-select/div/div/div[2]")
 	WebElement rCBeneficiaryOfTheCopyMajor;
 
-	@FindBy(xpath = "/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/form/div[5]/div[3]/div[1]/ng-select/ng-dropdown-panel/div/div[2]/div[2]")
+	@FindBy(xpath = "/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/form/div[4]/div[3]/div[1]/ng-select/ng-dropdown-panel/div/div[2]/div[2]")
 	WebElement rCBeneficiaryOfTheCopyMinor;
 
-	@FindBy(xpath = "/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/form/div[7]/div[2]/table/tbody/tr/td[2]/document-actions/button")
+	@FindBy(xpath = "/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/form/div[6]/div[2]/table/tbody/tr/td[2]/document-actions/button")
 	WebElement rCAddCopyOrderDocumentBtn;
 
-
-	@FindBy(xpath = "/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/form/div[8]/button[5]")
+	@FindBy(xpath = "/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/form/div[7]/button[5]")
 	WebElement copySubmitBtn;
 
-
-	@FindBy(xpath = "/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/form/div[8]/button[1]")
+	@FindBy(xpath = "/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/form/div[7]/button[1]")
 	WebElement copyViewFeeReceiptBtn;
 
 	@FindBy(xpath = "/html/body/ngb-modal-window/div/div/ng-component/div[3]/div/div[1]/button")
@@ -55,18 +48,14 @@ public class CopiesPage extends PageBase
 	@FindBy(name = "CopyType")
 	WebElement copyTypeMajor;
 
-
 	@FindBy(xpath = "/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/div/div[2]/table-server/div[2]/div/div[1]/div[4]")
 	WebElement rCOrderNum;
-
 
 	@FindBy(name = "requesterNumber")
 	WebElement requesterNumberField;
 
-	@FindBy(css ="button.btn.btn-block.btn-search-outline")
+	@FindBy(css = "button.btn.btn-block.btn-search-outline")
 	WebElement searchBtn;
-
-
 
 	@FindBy(xpath = "/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/div/div[2]/table-server/div[2]/div/div[2]/div[1]/button[4]")
 	WebElement copyDelivery;
@@ -74,17 +63,16 @@ public class CopiesPage extends PageBase
 	@FindBy(xpath = "/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/div/div[2]/table-server/div[2]/div/div[2]/div[1]/button[3]")
 	public static WebElement theCopy;
 
-
 	@FindBy(xpath = "/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/form/div[1]/div/div[1]/div/ng-select/ng-dropdown-panel/div/div[2]/div[2]")
 	WebElement memorialCopyMinor;
 
-	@FindBy(xpath ="/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/form/div[4]/div[2]/div[2]/input")
+	@FindBy(xpath = "/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/form/div[3]/div[2]/div/div[2]/input")
 	WebElement fromExternalBtn;
 
-	@FindBy(xpath = "/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/form/div[4]/div[3]/div[1]/external-requester-selector/div/div/div/div[1]/button")
+	@FindBy(xpath = "/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/form/div[3]/div[3]/div[1]/external-requester-selector/div/div/div/div[1]/button")
 	WebElement addType;
 
-	@FindBy(xpath = "/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/form/div[4]/div[3]/div[1]/external-requester-selector/div/div/div/div[1]/div/a[1]")
+	@FindBy(xpath = "/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/form/div[3]/div[3]/div[1]/external-requester-selector/div/div/div/div[1]/div/a[1]")
 	WebElement addNormalPerson;
 
 	@FindBy(name = "nationalId")
@@ -107,8 +95,7 @@ public class CopiesPage extends PageBase
 
 	@FindBy(xpath = "/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/form/div[1]/div/div[1]/div/ng-select/ng-dropdown-panel/div/div[2]/div[3]")
 	WebElement officialJudgeTypeMinor;
-	
-	
+
 	@FindBy(xpath = "/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/form/div[2]/div[2]/div/ng-select/div/div/div[2]")
 	WebElement officialJudgeTempMajor;
 
@@ -117,58 +104,58 @@ public class CopiesPage extends PageBase
 
 	@FindBy(xpath = "/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/form/div[4]/div[3]/div[1]/ng-select/div/div/div[2]")
 	WebElement oJCBeneficiaryMajor;
-	
+
 	@FindBy(xpath = "/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/form/div[4]/div[3]/div[1]/ng-select/ng-dropdown-panel/div/div[2]/div[2]")
 	WebElement oJCBeneficiaryScPersonMinor;
-	
+
 	@FindBy(xpath = "/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/form/div[6]/div[2]/table/tbody/tr/td[2]/document-actions/button")
 	WebElement addOJCDocBtn;
-	
+
 	@FindBy(xpath = "/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/form/div[7]/button[5]")
-	WebElement oJCSaveBtn ;
-	
+	WebElement oJCSaveBtn;
+
 	@FindBy(xpath = "/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/form/div[7]/button[1]")
 	WebElement oJCViewFeeReceiptBtn;
-	
-	@FindBy(xpath ="/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/form/div[1]/div/div[1]/div/ng-select/ng-dropdown-panel/div/div[2]/div[4]")
+
+	@FindBy(xpath = "/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/form/div[1]/div/div[1]/div/ng-select/ng-dropdown-panel/div/div[2]/div[4]")
 	WebElement copyFromTheFrontOfTheCaseTypeMinor;
-	
+
 	@FindBy(xpath = "/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/form/div[4]/div[2]/ng-select")
 	WebElement documentFoldersMajor;
-	
+
 	@FindBy(xpath = "/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/form/div[4]/div[2]/ng-select/ng-dropdown-panel/div/div[2]/div")
 	WebElement documentFoldersMinor;
-	
+
 	@FindBy(xpath = "/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/form/div[5]/div[3]/div[1]/ng-select/div/div/div[2]")
 	WebElement dFBeneficiaryMajor;
-	
+
 	@FindBy(xpath = "/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/form/div[5]/div[3]/div[1]/ng-select/ng-dropdown-panel/div/div[2]/div[1]")
 	WebElement dFBeneficiaryFPMinor;
-	
 
 	@FindBy(xpath = "/html/body/ngb-modal-window/div/div/casetypelinkedsearchpopup/div[2]/form/div/div[3]/div/ng-select/ng-dropdown-panel/div/div[2]/div[4]")
 	WebElement classificationTableMinorCompensation;
-	
-	/*@FindBy(xpath = "")
-	WebElement ;
-	
-	@FindBy(xpath = "")
-	WebElement ;
-*/
-	public void recordeCase(String serialCaseNum) throws InterruptedException
-	{
+
+	@FindBy(xpath = "/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/form/div[2]/div/div/div[1]/div/button")
+	WebElement copyCaseSearchBtn;
+
+	@FindBy(xpath = "/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/form/div[4]/div[2]/div/div[1]/input")
+	WebElement benefRadioBtn;
+
+	public void recordeCase(String serialCaseNum) throws InterruptedException {
 		clickBtn(cePageElement.addBtn);
 		fluentWait(copyTypeMajor);
 		selectFromDropDownNGList(copyTypeMajor, recordeCaseMinorCopy);
-		clickBtn(cePageElement.caseSearchBtn);
+		clickBtn(copyCaseSearchBtn);
 		fluentWait(cePageElement.courtMajorElement);
 		setTxt(cePageElement.caseSerialNumberField, serialCaseNum);
 		selectFromDropDownNGList(cePageElement.yearField, cePageElement.yearMinor);
-		selectFromDropDownNGList(cePageElement.classificationTableMajorElement,cePageElement.classificationTableMinorRentals);
-		selectFromDropDownNGList(cePageElement.courtMajorElement,cePageElement.courtMinorSouthCairo);
+		selectFromDropDownNGList(cePageElement.classificationTableMajorElement,
+				cePageElement.classificationTableMinorRentals);
+		selectFromDropDownNGList(cePageElement.courtMajorElement, cePageElement.courtMinorSouthCairo);
 		clickBtn(cePageElement.searchBtn);
-		Thread.sleep(1500);
+		Thread.sleep(6000);
 		selectFromDropDownNGList(rCDataRecordCaseMajor, rCFirstDataRecordCaseMinor);
+		clickBtn(benefRadioBtn);
 		selectFromDropDownNGList(rCBeneficiaryOfTheCopyMajor, rCBeneficiaryOfTheCopyMinor);
 		clickBtn(copySubmitBtn);
 		Thread.sleep(2500);
@@ -182,20 +169,20 @@ public class CopiesPage extends PageBase
 
 	}
 
-
-	public void memorialCopy(String serialCaseNum,String personId) throws InterruptedException
-	{
+	public void memorialCopy(String serialCaseNum, String personId) throws InterruptedException {
 		clickBtn(cePageElement.addBtn);
 		fluentWait(copyTypeMajor);
 		selectFromDropDownNGList(copyTypeMajor, memorialCopyMinor);
-		clickBtn(cePageElement.caseSearchBtn);
+		clickBtn(copyCaseSearchBtn);
 		fluentWait(cePageElement.courtMajorElement);
 		setTxt(cePageElement.caseSerialNumberField, serialCaseNum);
 		selectFromDropDownNGList(cePageElement.yearField, cePageElement.yearMinor);
-		selectFromDropDownNGList(cePageElement.classificationTableMajorElement,cePageElement.classificationTableMinorRentals);
-		selectFromDropDownNGList(cePageElement.courtMajorElement,cePageElement.courtMinorSouthCairo);
+		selectFromDropDownNGList(cePageElement.classificationTableMajorElement,
+				cePageElement.classificationTableMinorRentals);
+		selectFromDropDownNGList(cePageElement.courtMajorElement, cePageElement.courtMinorSouthCairo);
 		clickBtn(cePageElement.searchBtn);
 		fluentWait(fromExternalBtn);
+		Thread.sleep(3000);
 		clickBtn(fromExternalBtn);
 		fluentWait(addType);
 		addNormalPerson(addType, addNormalPerson, idField, personId, nPsearchBtn, saveBtn);
@@ -205,7 +192,7 @@ public class CopiesPage extends PageBase
 		Thread.sleep(2500);
 		uploadPdf(rCAddCopyOrderDocumentBtn, cePageElement.selectPermissionBtn, cePageElement.savePermissionBtn);
 		Thread.sleep(7000);
-		uploadPdf(declarationAddDocBtn,cePageElement.selectPermissionBtn, cePageElement.savePermissionBtn);
+		uploadPdf(declarationAddDocBtn, cePageElement.selectPermissionBtn, cePageElement.savePermissionBtn);
 		Thread.sleep(7000);
 		clickBtn(copyViewFeeReceiptBtn);
 		fluentWait(issuingRecipt);
@@ -213,20 +200,19 @@ public class CopiesPage extends PageBase
 
 		paymentAndDeliveryOfTheCopy("Memorial");
 
-
 	}
-	
-	public void theOfficialJudgementCopy (String serialCaseNum) throws InterruptedException
-	{
+
+	public void theOfficialJudgementCopy(String serialCaseNum) throws InterruptedException {
 		clickBtn(cePageElement.addBtn);
 		fluentWait(copyTypeMajor);
 		selectFromDropDownNGList(copyTypeMajor, officialJudgeTypeMinor);
-		clickBtn(cePageElement.caseSearchBtn);
+		clickBtn(copyCaseSearchBtn);
 		fluentWait(cePageElement.courtMajorElement);
 		setTxt(cePageElement.caseSerialNumberField, serialCaseNum);
 		selectFromDropDownNGList(cePageElement.yearField, cePageElement.yearMinor);
-		selectFromDropDownNGList(cePageElement.classificationTableMajorElement,cePageElement.classificationTableMinorRentals);
-		selectFromDropDownNGList(cePageElement.courtMajorElement,cePageElement.courtMinorSouthCairo);
+		selectFromDropDownNGList(cePageElement.classificationTableMajorElement,
+				cePageElement.classificationTableMinorRentals);
+		selectFromDropDownNGList(cePageElement.courtMajorElement, cePageElement.courtMinorSouthCairo);
 		clickBtn(cePageElement.searchBtn);
 		fluentWait(officialJudgeTempMajor);
 		selectFromDropDownNGList(officialJudgeTempMajor, officialJudgeTempMinor);
@@ -239,24 +225,22 @@ public class CopiesPage extends PageBase
 		clickBtn(oJCViewFeeReceiptBtn);
 		fluentWait(issuingRecipt);
 		clickBtn(issuingRecipt);
-		
+
 		paymentAndDeliveryOfTheCopy("Official Judgement");
-		
-		
+
 	}
-	
-	
-	public void copyFromTheFrontOfTheCase(String serialCaseNum) throws InterruptedException
-	{
+
+	public void copyFromTheFrontOfTheCase(String serialCaseNum) throws InterruptedException {
 		clickBtn(cePageElement.addBtn);
 		fluentWait(copyTypeMajor);
 		selectFromDropDownNGList(copyTypeMajor, copyFromTheFrontOfTheCaseTypeMinor);
-		clickBtn(cePageElement.caseSearchBtn);
+		clickBtn(copyCaseSearchBtn);
 		fluentWait(cePageElement.courtMajorElement);
 		setTxt(cePageElement.caseSerialNumberField, serialCaseNum);
 		selectFromDropDownNGList(cePageElement.yearField, cePageElement.yearMinor);
-		selectFromDropDownNGList(cePageElement.classificationTableMajorElement,cePageElement.classificationTableMinorRentals);
-		selectFromDropDownNGList(cePageElement.courtMajorElement,cePageElement.courtMinorSouthCairo);
+		selectFromDropDownNGList(cePageElement.classificationTableMajorElement,
+				cePageElement.classificationTableMinorRentals);
+		selectFromDropDownNGList(cePageElement.courtMajorElement, cePageElement.courtMinorSouthCairo);
 		clickBtn(cePageElement.searchBtn);
 		fluentWait(documentFoldersMajor);
 		selectFromDropDownNGList(documentFoldersMajor, documentFoldersMinor);
@@ -269,45 +253,24 @@ public class CopiesPage extends PageBase
 		clickBtn(copyViewFeeReceiptBtn);
 		fluentWait(issuingRecipt);
 		clickBtn(issuingRecipt);
-		
+
 		paymentAndDeliveryOfTheCopy("Copy From The Front Of The Case");
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 
- 	private void paymentAndDeliveryOfTheCopy(String CopyOrderType) throws InterruptedException
-	{
-		String orderNumber=null;
+	private void paymentAndDeliveryOfTheCopy(String CopyOrderType) throws InterruptedException {
+		String orderNumber = null;
 
 		getStepBack();
-		
-		if(CopyOrderType=="Recorde Case" || CopyOrderType=="Copy From The Front Of The Case") 
-		{
+
+		if (CopyOrderType == "Recorde Case" || CopyOrderType == "Copy From The Front Of The Case") {
 			fluentWait(rCOrderNum);
-			orderNumber=rCOrderNum.getText();
-		}
-		else if (CopyOrderType=="Memorial" || CopyOrderType=="Official Judgement")
-		{
+			orderNumber = rCOrderNum.getText();
+		} else if (CopyOrderType == "Memorial" || CopyOrderType == "Official Judgement") {
 			fluentWait(memorialOrderNum);
-			orderNumber=memorialOrderNum.getText();
-		}	
-		String[] x=orderNumber.split("/");
-		String[] xx=x[0].split(":");
+			orderNumber = memorialOrderNum.getText();
+		}
+		String[] x = orderNumber.split("/");
+		String[] xx = x[0].split(":");
 		Thread.sleep(5000);
 		loggedOut();
 		treasuryPage.completeThePaymentProcess(xx[1], "1");
@@ -325,6 +288,4 @@ public class CopiesPage extends PageBase
 
 	}
 
-
 }
-

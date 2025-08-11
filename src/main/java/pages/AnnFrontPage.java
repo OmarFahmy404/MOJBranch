@@ -75,7 +75,7 @@ public class AnnFrontPage extends PageBase
 	WebElement saveAnnBtn;
 	
 	
-	public void addDataInAnnouncement(String strangerNationalId)
+	public void addDataInAnnouncement(String strangerNationalId) throws InterruptedException
 	{
 		fluentWait(creatAnnBtn);
 		clickBtn(creatAnnBtn);
@@ -86,6 +86,7 @@ public class AnnFrontPage extends PageBase
 		clickBtn(addFromInsideTheCaseBtn);
 		selectFromDropDownNGList(selectOpponentMajor, firstPersonMinor);
 		clickBtn(submitBtn);
+		Thread.sleep(9000);
 		clickBtn(sameAddressAnnBtn);
 		selectFromDropDownNGList(penMajor, penMinor);
 		clickBtn(submitPersonBtn);

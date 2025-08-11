@@ -12,8 +12,7 @@ import pages.AnnStatusPage;
 import pages.LoginPage;
 import pages.PageBase;
 
-public class AnnouncementTest extends TestBase
-{
+public class AnnouncementTest extends TestBase {
 
 	LoginPage loginPage;
 	AnnouncementPage annPage;
@@ -21,161 +20,162 @@ public class AnnouncementTest extends TestBase
 	AnnFrontPage annFrontPage;
 	AnnBackPage annBackPage;
 	AnnStatusPage annStatusPage;
-	
-	
+
 	@BeforeMethod
-	public void loginAndGetInAnnPart()
-	{
-		loginPage=new LoginPage(driver);
+	public void loginAndGetInAnnPart() {
+		loginPage = new LoginPage(driver);
 		loginPage.fluentWait(loginPage.userNameField);
 		loginPage.loginData("fees.ann", "Admin123");
-		
-		annPage=new AnnouncementPage(driver);
+
+		annPage = new AnnouncementPage(driver);
 		PageBase.fluentWait(annPage.annFeesTab);
 		annPage.getInAnnFeesTab();
 
-		
 	}
-	
-	
+
 	@Test(priority = 1)
-	public void creatAnnAttachWithCaseFirstTimeTest() throws InterruptedException
-	{
-		annFeesPage=new AnnFeesPage(driver);
-		annFeesPage.createAnnAttachWithCaseFirstTime("12541","1", "1", "29911111111111","صف الاعلان العام");
-		
+	public void creatAnnAttachWithCaseFirstTimeTest() throws InterruptedException {
+		annFeesPage = new AnnFeesPage(driver);
+		annFeesPage.createAnnAttachWithCaseFirstTime("12541", "1", "1", "29911111111111", "صف الاعلان العام");
+
 		Thread.sleep(2000);
 		annPage.getInEntryAnnTab();
-		
-		annFrontPage=new AnnFrontPage(driver);
+
+		annFrontPage = new AnnFrontPage(driver);
 		annFrontPage.addDataInAnnouncement("28711111111111");
-		
-		Thread.sleep(3000);
+
+		Thread.sleep(5000);
 		annPage.getInCompleteAnnTab();
-		
-		annBackPage=new AnnBackPage(driver);
+
+		annBackPage = new AnnBackPage(driver);
 		annBackPage.finishAnnProcess();
-				
-		SoftAssert sAssert=new SoftAssert();
+
+		SoftAssert sAssert = new SoftAssert();
 		Thread.sleep(1500);
-		sAssert.assertTrue(AnnBackPage.statusTxt.getText().contains("تمت المراجعة"),"the change of the announcement status");
-		
-		Thread.sleep(3000);
+		sAssert.assertTrue(AnnBackPage.statusTxt.getText().contains("تمت المراجعة"),
+				"the change of the announcement status");
+
+		Thread.sleep(4000);
 		annPage.getInFollowAnnTab();
-		
-		annStatusPage=new AnnStatusPage(driver);
-		annStatusPage.searchOnAnnNum();
-		
+
+		annStatusPage = new AnnStatusPage(driver);
+		// annStatusPage.searchOnAnnNum();
+
 		Thread.sleep(2000);
-		
-		sAssert.assertTrue(annStatusPage.getAnnType().contains("حكم نهائي - إعادة إعلان - إعلان عام"),"Annoucement types");
-		
+
+		sAssert.assertTrue(annStatusPage.getAnnType().contains("حكم نهائي - إعادة إعلان - إعلان عام"),
+				"Annoucement types");
+
 		sAssert.assertAll();
-		
+
 	}
-	
+
 	@Test(priority = 2)
-	public void creatAnnAttachWithCaseSecondeTimeTest() throws InterruptedException
-	{
-		annFeesPage=new AnnFeesPage(driver);
-		annFeesPage.createAnnAttachWithCaseForSecondeTime("12541","اعلان عام","27811111111111");
-		
+	public void creatAnnAttachWithCaseSecondeTimeTest() throws InterruptedException {
+		annFeesPage = new AnnFeesPage(driver);
+		annFeesPage.createAnnAttachWithCaseForSecondeTime("12541", "اعلان عام", "27811111111111");
+
 		Thread.sleep(2000);
 		annPage.getInEntryAnnTab();
-		
-		annFrontPage=new AnnFrontPage(driver);
+
+		annFrontPage = new AnnFrontPage(driver);
 		annFrontPage.addDataInAnnouncement("27811111111111");
-		
-		Thread.sleep(3000);
+
+		Thread.sleep(6000);
 		annPage.getInCompleteAnnTab();
-		
-		annBackPage=new AnnBackPage(driver);
+
+		annBackPage = new AnnBackPage(driver);
 		annBackPage.finishAnnProcess();
-				
-		SoftAssert sAssert=new SoftAssert();
-		Thread.sleep(1500);
-		sAssert.assertTrue(AnnBackPage.statusTxt.getText().contains("تمت المراجعة"),"the change of the announcement status");
-		
+
+		SoftAssert sAssert = new SoftAssert();
 		Thread.sleep(3000);
+		sAssert.assertTrue(AnnBackPage.statusTxt.getText().contains("تمت المراجعة"),
+				"the change of the announcement status");
+
+		Thread.sleep(6000);
 		annPage.getInFollowAnnTab();
-		
-		annStatusPage=new AnnStatusPage(driver);
-		//annStatusPage.searchOnAnnNum();
-		
-		Thread.sleep(2000);
-		
-		sAssert.assertTrue(annStatusPage.getAnnType().contains("حكم نهائي - إعادة إعلان - إعلان عام"),"Annoucement types");
-		
+
+		annStatusPage = new AnnStatusPage(driver);
+		// annStatusPage.searchOnAnnNum();
+
+		Thread.sleep(6000);
+
+		sAssert.assertTrue(annStatusPage.getAnnType().contains("حكم نهائي - إعادة إعلان - إعلان عام"),
+				"Annoucement types");
+
 		sAssert.assertAll();
 	}
-	
+
 	@Test(priority = 3)
-	public  void creatAnnAttachWithOrderFirstTimeTest() throws InterruptedException
-	{
-		annFeesPage=new AnnFeesPage(driver);
-		annFeesPage.createAnnAttachWithOrderFirstTime("18","1", "1", "28711111111111","صف الاعلان العام");
-		
+	public void creatAnnAttachWithOrderFirstTimeTest() throws InterruptedException {
+		annFeesPage = new AnnFeesPage(driver);
+		annFeesPage.createAnnAttachWithOrderFirstTime("8", "1", "1", "28711111111111", "صف الاعلان العام");
+
 		Thread.sleep(2000);
 		annPage.getInEntryAnnTab();
-		
-		annFrontPage=new AnnFrontPage(driver);
+
+		annFrontPage = new AnnFrontPage(driver);
 		annFrontPage.addDataInAnnouncement("28711111111111");
-		
+
 		Thread.sleep(3000);
 		annPage.getInCompleteAnnTab();
-		
-		annBackPage=new AnnBackPage(driver);
+
+		annBackPage = new AnnBackPage(driver);
 		annBackPage.finishAnnProcess();
-				
-		SoftAssert sAssert=new SoftAssert();
+
+		SoftAssert sAssert = new SoftAssert();
 		Thread.sleep(1500);
-		sAssert.assertTrue(AnnBackPage.statusTxt.getText().contains("تمت المراجعة"),"the change of the announcement status");
-		
+		sAssert.assertTrue(AnnBackPage.statusTxt.getText().contains("تمت المراجعة"),
+				"the change of the announcement status");
+
 		Thread.sleep(3000);
 		annPage.getInFollowAnnTab();
-		
-		annStatusPage=new AnnStatusPage(driver);
-		//annStatusPage.searchOnAnnNum();
-		
-		
-		sAssert.assertTrue(annStatusPage.getAnnType().contains(" قرار إحالة لدائرة أخرى - قرار لورود تقرير الخبير - إعلان عام"),"Annoucement types");
-		
+
+		annStatusPage = new AnnStatusPage(driver);
+		// annStatusPage.searchOnAnnNum();
+
+		sAssert.assertTrue(
+				annStatusPage.getAnnType().contains(" قرار إحالة لدائرة أخرى - قرار لورود تقرير الخبير - إعلان عام"),
+				"Annoucement types");
+
 		sAssert.assertAll();
 	}
-	
+
 	@Test(priority = 4)
-	public void creatAnnAttachWithOrderSecondeTimeTest() throws InterruptedException
-	{
-		annFeesPage=new AnnFeesPage(driver);
-		annFeesPage.createAnnAttachWithOrderForSecondeTime("18","اعلان عام","28711111111111");
-		
+	public void creatAnnAttachWithOrderSecondeTimeTest() throws InterruptedException {
+		annFeesPage = new AnnFeesPage(driver);
+		annFeesPage.createAnnAttachWithOrderForSecondeTime("8", "اعلان عام", "28711111111111");
+
 		Thread.sleep(2000);
 		annPage.getInEntryAnnTab();
-		
-		annFrontPage=new AnnFrontPage(driver);
+
+		annFrontPage = new AnnFrontPage(driver);
 		annFrontPage.addDataInAnnouncement("23911111111111");
-		
+
 		Thread.sleep(3000);
 		annPage.getInCompleteAnnTab();
-		
-		annBackPage=new AnnBackPage(driver);
+
+		annBackPage = new AnnBackPage(driver);
 		annBackPage.finishAnnProcess();
-				
-		SoftAssert sAssert=new SoftAssert();
+
+		SoftAssert sAssert = new SoftAssert();
 		Thread.sleep(1500);
-		sAssert.assertTrue(AnnBackPage.statusTxt.getText().contains("تمت المراجعة"),"the change of the announcement status");
-		
+		sAssert.assertTrue(AnnBackPage.statusTxt.getText().contains("تمت المراجعة"),
+				"the change of the announcement status");
+
 		Thread.sleep(3000);
 		annPage.getInFollowAnnTab();
-		
-		annStatusPage=new AnnStatusPage(driver);
-	//	annStatusPage.searchOnAnnNum();
-		
+
+		annStatusPage = new AnnStatusPage(driver);
+		// annStatusPage.searchOnAnnNum();
+
 		Thread.sleep(2000);
-		
-		sAssert.assertTrue(annStatusPage.getAnnType().contains(" قرار إحالة لدائرة أخرى - قرار لورود تقرير الخبير - إعلان عام"),"Annoucement types");
-		
+
+		sAssert.assertTrue(
+				annStatusPage.getAnnType().contains(" قرار إحالة لدائرة أخرى - قرار لورود تقرير الخبير - إعلان عام"),
+				"Annoucement types");
+
 		sAssert.assertAll();
 	}
-	
+
 }

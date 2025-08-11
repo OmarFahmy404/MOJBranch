@@ -173,9 +173,10 @@ public class SecPublicHearingOfInvestigationPage extends PageBase
 	
 	public void compeletInvestigationHearingProcess(String caseId) throws InterruptedException
 	{
-		
+		Thread.sleep(2000);
+
 		getInSpecialCase(caseId);
-		Thread.sleep(79000);
+		Thread.sleep(2000);
 		clickBtn(openInvestBtn);
 		fluentWait(investReportBtn);
 		clickBtn(investReportBtn);

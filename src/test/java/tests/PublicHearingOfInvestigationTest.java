@@ -28,7 +28,6 @@ public class PublicHearingOfInvestigationTest extends TestBase
 	public void finishTheHearingOfInvestigationProcessTest() throws InterruptedException
 	{
 		investigationPage=new SecPublicHearingOfInvestigationPage(driver);
-		Thread.sleep(7000);
 		investigationPage.compeletInvestigationHearingProcess("6344");
 	}
 	

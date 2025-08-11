@@ -1,8 +1,11 @@
 <suite name="Trunk 58 Regrission Suite">
-<test name="Regrission Test" perserve-order="true">
-<classes>
-<class name="tests.CertificatesTest"/>
-<class name="tests.CopiesTest"/>
-</classes>
-</test>
+	<test name="Regrission Test" preserve-order="true">
+		<classes>
+			<class name="tests.CertificatesTest" />
+			<class name="tests.CopiesTest" />
+			<class name="tests.AnnouncementTest" />
+			<class name="tests.AdministrativeAnnTest" />
+			<class name="tests.WarningsTest" />
+		</classes>
+	</test>
 </suite>

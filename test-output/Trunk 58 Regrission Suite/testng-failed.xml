@@ -7,14 +7,60 @@
         <methods>
           <include name="copyFromTheFrontOfTheCaseTest"/>
           <include name="startDriver"/>
-          <include name="memorialCopyTest"/>
           <include name="getInCertificatesPage"/>
+          <include name="memorialCopyTest"/>
           <include name="stopDriver"/>
           <include name="officialJudCopyTest"/>
           <include name="screenshotOnFailure"/>
           <include name="recordCaseCopyTest"/>
         </methods>
       </class> <!-- tests.CopiesTest -->
+      <class name="tests.WarningsTest">
+        <methods>
+          <include name="creatWarAttachWithOrderSecondeTimeTest"/>
+          <include name="startDriver"/>
+          <include name="loginAndGetInAnnPart"/>
+          <include name="creatWarAttachWithOrderFirstTimeTest"/>
+          <include name="stopDriver"/>
+          <include name="creatWarAttachWithCaseFirstTimeTest"/>
+          <include name="creatAnnAttachWithCaseSecondeTimeTest"/>
+          <include name="screenshotOnFailure"/>
+        </methods>
+      </class> <!-- tests.WarningsTest -->
+      <class name="tests.AdministrativeAnnTest">
+        <methods>
+          <include name="startDriver"/>
+          <include name="stopDriver"/>
+          <include name="adminsitrartiveOrderProcessTest"/>
+          <include name="screenshotOnFailure"/>
+          <include name="adminsitrartiveAnnProcessTest"/>
+          <include name="LoginAndGetInThePage"/>
+        </methods>
+      </class> <!-- tests.AdministrativeAnnTest -->
+      <class name="tests.CertificatesTest">
+        <methods>
+          <include name="terroristGroupsCase"/>
+          <include name="getInCertificatesPage"/>
+          <include name="completeSessionCasesCertProcess"/>
+          <include name="startDriver"/>
+          <include name="caseNoExist"/>
+          <include name="stopDriver"/>
+          <include name="screenshotOnFailure"/>
+          <include name="completeBrotestoCase"/>
+        </methods>
+      </class> <!-- tests.CertificatesTest -->
+      <class name="tests.AnnouncementTest">
+        <methods>
+          <include name="creatAnnAttachWithOrderSecondeTimeTest"/>
+          <include name="startDriver"/>
+          <include name="creatAnnAttachWithOrderFirstTimeTest"/>
+          <include name="stopDriver"/>
+          <include name="creatAnnAttachWithCaseSecondeTimeTest"/>
+          <include name="loginAndGetInAnnPart"/>
+          <include name="screenshotOnFailure"/>
+          <include name="creatAnnAttachWithCaseFirstTimeTest"/>
+        </methods>
+      </class> <!-- tests.AnnouncementTest -->
     </classes>
   </test> <!-- Regrission Test(failed) -->
 </suite> <!-- Failed suite [Trunk 58 Regrission Suite] -->

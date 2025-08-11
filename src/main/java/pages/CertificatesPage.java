@@ -6,8 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class CertificatesPage extends PageBase
-{
+public class CertificatesPage extends PageBase {
 
 	public CertificatesPage(WebDriver driver) {
 		super(driver);
@@ -15,7 +14,7 @@ public class CertificatesPage extends PageBase
 
 	@FindBy(css = "button.btn.btn-add-outline")
 	public static WebElement addBtn;
-	@FindBy(xpath="/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/form/div[1]/div/div[1]/div/ng-select/div/div/div[2]")
+	@FindBy(xpath = "/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/form/div[1]/div/div[1]/div/ng-select/div/div/div[2]")
 	WebElement certTypeMajorElement;
 	@FindBy(xpath = "/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/form/div[1]/div/div[1]/div/ng-select/ng-dropdown-panel/div/div[2]/div[1]")
 	WebElement certTypeMinorSessionsCases;
@@ -30,10 +29,10 @@ public class CertificatesPage extends PageBase
 	@FindBy(xpath = "/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/form/div[2]/div/div[1]/div/button")
 	WebElement caseSearchBtn;
 	@FindBy(name = "caseSerialNumber")
-	WebElement caseSerialNumberField ;
+	WebElement caseSerialNumberField;
 	@FindBy(name = "year")
 	WebElement yearField;
-	@FindBy(xpath = "/html/body/ngb-modal-window/div/div/casetypelinkedsearchpopup/div[2]/form/div/div[2]/div/ng-select/ng-dropdown-panel/div/div[2]/div[1]")
+	@FindBy(xpath = "/html/body/ngb-modal-window/div/div/casetypelinkedsearchpopup/div[2]/form/div/div[2]/div/ng-select/ng-dropdown-panel/div/div[2]/div[2]")
 	WebElement yearMinor;
 	@FindBy(xpath = "/html/body/ngb-modal-window/div/div/casetypelinkedsearchpopup/div[2]/form/div/div[3]/div/ng-select/div")
 	WebElement classificationTableMajorElement;
@@ -45,6 +44,10 @@ public class CertificatesPage extends PageBase
 	WebElement courtMinorSouthCairo;
 	@FindBy(xpath = "/html/body/ngb-modal-window/div/div/casetypelinkedsearchpopup/div[2]/form/div/div[7]/button")
 	WebElement searchBtn;
+	
+	@FindBy(xpath = "/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/form/div[3]/div[2]/div/div[1]/input")
+	WebElement insideCaseRadioBtn;
+	
 	@FindBy(xpath = "/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/form/div[3]/div[3]/div[1]/ng-select/div/div/div[2]")
 	WebElement BeneficiaryOfTheCertificateFromCaseMajorElement;
 	@FindBy(xpath = "/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/form/div[3]/div[3]/div[1]/ng-select/ng-dropdown-panel/div/div[2]/div[1]")
@@ -58,7 +61,7 @@ public class CertificatesPage extends PageBase
 	@FindBy(name = "nationalId")
 	WebElement nationalIdField;
 	@FindBy(xpath = "/html/body/ngb-modal-window/div/div/ng-component/div[2]/div/form/div/div/div[1]/div[2]/button")
-	WebElement nationalIdSearchBtn;	
+	WebElement nationalIdSearchBtn;
 	@FindBy(xpath = "/html/body/ngb-modal-window/div/div/ng-component/div[2]/form/div[2]/button[1]")
 	WebElement savePersonBtn;
 	@FindBy(xpath = "/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/form/div[4]/div[2]/div[1]/input")
@@ -87,16 +90,16 @@ public class CertificatesPage extends PageBase
 	WebElement printTheOrderTypeBtn;
 	@FindBy(xpath = "/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/form/div[7]/button[3]")
 	public static WebElement displayTheCertificateBtn;
-		
+
 	@FindBy(xpath = "/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/form/div[5]/div[3]/div[2]/input")
 	WebElement exemptedRadioBtn;
-	@FindBy(name="feesExemptionReason")
+	@FindBy(name = "feesExemptionReason")
 	WebElement exemptionReasonField;
 	@FindBy(xpath = "/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/form/div[6]/div[2]/table/tbody/tr[2]/td[2]/document-actions/button")
 	WebElement addFeeExemptionDocumentbtn;
-	@FindBy(xpath="/html/body/ngb-modal-window/div/div/ng-component/form/div[1]/div/div/div/div[1]/input")
+	@FindBy(xpath = "/html/body/ngb-modal-window/div/div/ng-component/form/div[1]/div/div/div/div[1]/input")
 	WebElement selectFeeExemptionDocumentbtn;
-	@FindBy(xpath="/html/body/ngb-modal-window/div/div/ng-component/form/div[2]/button[1]")
+	@FindBy(xpath = "/html/body/ngb-modal-window/div/div/ng-component/form/div[2]/button[1]")
 	WebElement saveFeeExemptionDocumentbtn;
 	@FindBy(xpath = "/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/form/div[2]/div[2]/div[1]/external-requester-selector/div/div/div/div[1]/button")
 	WebElement brotstoBeneficiaryTypeOfTheCertificate;
@@ -120,7 +123,7 @@ public class CertificatesPage extends PageBase
 	WebElement extraContentElement;
 	@FindBy(xpath = "/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/form/div[6]/div[2]/table/tbody/tr[3]/td[2]/document-actions/button")
 	WebElement validityOfTheAdditionalContent;
-	
+
 	@FindBy(xpath = "/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/form/div[4]/div[3]/div[2]/input")
 	WebElement tGexemptedRadioBtn;
 	@FindBy(xpath = "/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/form/div[6]/button[5]")
@@ -128,7 +131,7 @@ public class CertificatesPage extends PageBase
 	@FindBy(xpath = "/html/body/div/div/div[6]/button[1]")
 	WebElement tGsubmitBtn2;
 	@FindBy(xpath = "/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/form/div[3]/div[2]")
-	WebElement  terroristGExtraContent;
+	WebElement terroristGExtraContent;
 	@FindBy(xpath = "/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/form/div[5]/div[2]/table/tbody/tr[1]/td[2]/document-actions/button")
 	WebElement tGaddTheCertificateOrder;
 	@FindBy(xpath = "/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/form/div[5]/div[2]/table/tbody/tr[2]/td[2]/document-actions/button")
@@ -136,50 +139,50 @@ public class CertificatesPage extends PageBase
 	@FindBy(xpath = "/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/form/div[5]/div[2]/table/tbody/tr[3]/td[2]/document-actions/button")
 	WebElement tGvalidityOfTheAdditionalContent;
 	@FindBy(xpath = "/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/form/div[6]/button[1]")
-	WebElement  tGviewFeeReceiptBtn;
+	WebElement tGviewFeeReceiptBtn;
 	@FindBy(xpath = "/html/body/ngb-modal-window/div/div/ng-component/div[3]/div/div[1]/button")
-	WebElement  tGissuingTheReceiptBtn;                                  ///////////////////
+	WebElement tGissuingTheReceiptBtn; ///////////////////
 	@FindBy(xpath = "/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/form/div[6]/button[3]")
-	public static WebElement  tGdisplayTheCertificateBtn;                              ///////////////////
-	@FindBy(name="plaintiffName")
+	public static WebElement tGdisplayTheCertificateBtn; ///////////////////
+	@FindBy(name = "plaintiffName")
 	WebElement caseBy;
-	@FindBy(xpath ="/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/form/div[4]/div[2]/div[1]/div/ng-select/div/div/div[2]")
+	@FindBy(xpath = "/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/form/div[4]/div[2]/div[1]/div/ng-select/div/div/div[2]")
 	WebElement tDClassificationTableMajor;
-	@FindBy(xpath ="/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/form/div[4]/div[2]/div[1]/div/ng-select/ng-dropdown-panel/div/div[2]/div[3]")
+	@FindBy(xpath = "/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/form/div[4]/div[2]/div[1]/div/ng-select/ng-dropdown-panel/div/div[2]/div[3]")
 	WebElement tDClassificationMinorRentals;
-	@FindBy(xpath ="/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/form/div[4]/div[2]/div[2]/div/ng-select/div/div/div[2]")
+	@FindBy(xpath = "/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/form/div[4]/div[2]/div[2]/div/ng-select/div/div/div[2]")
 	WebElement tDCourtMajor;
-	@FindBy(xpath ="/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/form/div[4]/div[2]/div[2]/div/ng-select/ng-dropdown-panel/div/div[2]/div[4]")
+	@FindBy(xpath = "/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/form/div[4]/div[2]/div[2]/div/ng-select/ng-dropdown-panel/div/div[2]/div[4]")
 	WebElement tDCourtMinorSouthCairo;
-	@FindBy(xpath ="/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/form/div[5]/div[2]/div[1]/div/custom-ng-date/div/input")
+	@FindBy(xpath = "/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/form/div[5]/div[2]/div[1]/div/custom-ng-date/div/input")
 	WebElement dStartDate;
 	@FindBy(xpath = "/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/form/div[5]/div[2]/div[1]/div/custom-ng-date/div/ngb-datepicker/div[1]/ngb-datepicker-navigation/ngb-datepicker-navigation-select/select[1]")
 	WebElement dSMonth;
-	@FindBy(xpath ="/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/form/div[5]/div[2]/div[2]/div/custom-ng-date/div/input")
+	@FindBy(xpath = "/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/form/div[5]/div[2]/div[2]/div/custom-ng-date/div/input")
 	WebElement dEndDate;
-	@FindBy(xpath ="/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/form/div[5]/div[2]/div[1]/div/custom-ng-date/div/ngb-datepicker/div[2]/div/ngb-datepicker-month/div[2]/div[3]")
+	@FindBy(xpath = "/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/form/div[5]/div[2]/div[1]/div/custom-ng-date/div/ngb-datepicker/div[2]/div/ngb-datepicker-month/div[2]/div[3]")
 	WebElement dFDofJan;
-	@FindBy(xpath ="/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/form/div[5]/div[2]/div[2]/div/custom-ng-date/div/ngb-datepicker/div[1]/ngb-datepicker-navigation/ngb-datepicker-navigation-select/select[1]")
+	@FindBy(xpath = "/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/form/div[5]/div[2]/div[2]/div/custom-ng-date/div/ngb-datepicker/div[1]/ngb-datepicker-navigation/ngb-datepicker-navigation-select/select[1]")
 	WebElement dEMonth;
-	@FindBy(xpath ="/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/form/div[5]/div[2]/div[2]/div/custom-ng-date/div/ngb-datepicker/div[2]/div/ngb-datepicker-month/div[6]/div[5]")
+	@FindBy(xpath = "/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/form/div[5]/div[2]/div[2]/div/custom-ng-date/div/ngb-datepicker/div[2]/div/ngb-datepicker-month/div[6]/div[5]")
 	WebElement dLDofJan;
-	@FindBy(xpath ="/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/form/div[6]/div[2]")
+	@FindBy(xpath = "/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/form/div[6]/div[2]")
 	WebElement dExtraContent;
-	@FindBy(id ="yesFeesExemption")
+	@FindBy(id = "yesFeesExemption")
 	WebElement dYesFeesRadioBtn;
-	@FindBy(xpath ="/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/form/div[8]/div[2]/table/tbody/tr[1]/td[2]/document-actions/button")
+	@FindBy(xpath = "/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/form/div[8]/div[2]/table/tbody/tr[1]/td[2]/document-actions/button")
 	WebElement dAddCetificateOrderDocumentBtn;
-	@FindBy(xpath ="/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/form/div[8]/div[2]/table/tbody/tr[2]/td[2]/document-actions/button")
+	@FindBy(xpath = "/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/form/div[8]/div[2]/table/tbody/tr[2]/td[2]/document-actions/button")
 	WebElement dAddFeeExemptionDocumentBtn;
-	@FindBy(xpath ="/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/form/div[8]/div[2]/table/tbody/tr[3]/td[2]/document-actions/button")
+	@FindBy(xpath = "/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/form/div[8]/div[2]/table/tbody/tr[3]/td[2]/document-actions/button")
 	WebElement dAddValidationDocumentBtn;
-	@FindBy(xpath ="/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/form/div[9]/button[5]")
+	@FindBy(xpath = "/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/form/div[9]/button[5]")
 	WebElement dSubmitBtn;
-	@FindBy(xpath ="/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/form/div[9]/button[1]")
+	@FindBy(xpath = "/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/form/div[9]/button[1]")
 	WebElement dViewFeeReceiptBtn;
-	@FindBy(xpath ="/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/form/div[9]/button[3]")
+	@FindBy(xpath = "/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/form/div[9]/button[3]")
 	public static WebElement dDisplayTheCertificateBtn;
-	@FindBy(xpath ="/html/body/ngb-modal-window/div/div/ng-component/div[3]/div/div[1]/button")
+	@FindBy(xpath = "/html/body/ngb-modal-window/div/div/ng-component/div[3]/div/div[1]/button")
 	WebElement dissuingTheReceiptBtn;
 	@FindBy(xpath = "/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/form/div[9]/button[3]")
 	WebElement dDisplayCertificateBtn;
@@ -188,9 +191,7 @@ public class CertificatesPage extends PageBase
 	@FindBy(xpath = "/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/form/div[2]/div[2]/div/ng-select/ng-dropdown-panel/div/div[2]/div")
 	WebElement nPOfficialJudgeSchemaMinor;
 
-
-	public void sessionCaseType(String serialCaseNum,String exemptionReason) throws InterruptedException
-	{
+	public void sessionCaseType(String serialCaseNum, String exemptionReason) throws InterruptedException {
 		clickBtn(addBtn);
 		fluentWait(certTypeMajorElement);
 		selectFromDropDownNGList(certTypeMajorElement, certTypeMinorSessionsCases);
@@ -199,10 +200,12 @@ public class CertificatesPage extends PageBase
 		setTxt(caseSerialNumberField, serialCaseNum);
 		selectFromDropDownNGList(yearField, yearMinor);
 		selectFromDropDownNGList(classificationTableMajorElement, classificationTableMinorRentals);
-		selectFromDropDownNGList(courtMajorElement,courtMinorSouthCairo);
+		selectFromDropDownNGList(courtMajorElement, courtMinorSouthCairo);
 		clickBtn(searchBtn);
 		Thread.sleep(2000);
-		selectFromDropDownNGList(BeneficiaryOfTheCertificateFromCaseMajorElement,BeneficiaryOfTheCertificateFromCaseMinorFirstPerson);
+		clickBtn(insideCaseRadioBtn);
+		selectFromDropDownNGList(BeneficiaryOfTheCertificateFromCaseMajorElement,
+				BeneficiaryOfTheCertificateFromCaseMinorFirstPerson);
 		fluentWait(exemptedRadioBtn);
 		clickBtn(exemptedRadioBtn);
 		setTxt(exemptionReasonField, exemptionReason);
@@ -221,15 +224,19 @@ public class CertificatesPage extends PageBase
 		clickBtn(displayTheCertificateBtn);
 		Thread.sleep(9000);
 	}
-	public void constraintNonConstraintBrotesto(String benfcNormalPersonId,String start_end_Month ,String extraContent ,String exemptionReason) throws InterruptedException
-	{
+
+	public void constraintNonConstraintBrotesto(String benfcNormalPersonId, String start_end_Month, String extraContent,
+			String exemptionReason) throws InterruptedException {
 
 		clickBtn(addBtn);
 		fluentWait(certTypeMajorElement);
 		selectFromDropDownNGList(certTypeMajorElement, certTypeMinorBrotstoCase);
-		addNormalPerson(brotstoBeneficiaryTypeOfTheCertificate, brotstoBenfcNormalPerson, nationalIdField, benfcNormalPersonId, searchPersonBtn,savePersonBtn);
+		Thread.sleep(4000);
+
+		addNormalPerson(brotstoBeneficiaryTypeOfTheCertificate, brotstoBenfcNormalPerson, nationalIdField,
+				benfcNormalPersonId, searchPersonBtn, savePersonBtn);
 		fluentWait(startCalenderTab);
-		selectCalenderDate(startCalenderTab,sMonthTab,start_end_Month,firstDayInJan);
+		selectCalenderDate(startCalenderTab, sMonthTab, start_end_Month, firstDayInJan);
 		fluentWait(endCalenderTab);
 		selectCalenderDate(endCalenderTab, eMonthTab, start_end_Month, lastDayInJan);
 		setTxtInAnotherWay(extraContentElement, extraContent);
@@ -240,7 +247,8 @@ public class CertificatesPage extends PageBase
 		clickBtn(submitBtn1);
 		clickBtn(submitBtn2);
 		Thread.sleep(4000);
-		//	fluentWait(addTheCertificateOrder, "clkInterceptedEx");    Didn't work in anyway !! , and deleted from the following ones , replaced by Thread.sleep .
+		// fluentWait(addTheCertificateOrder, "clkInterceptedEx"); Didn't work in anyway
+		// !! , and deleted from the following ones , replaced by Thread.sleep .
 		uploadPdf(addTheCertificateOrder, selectTheCertificateOrder, saveCertificateBtn);
 		Thread.sleep(8000);
 		uploadPdf(addFeeExemptionDocumentbtn, selectFeeExemptionDocumentbtn, saveFeeExemptionDocumentbtn);
@@ -248,17 +256,21 @@ public class CertificatesPage extends PageBase
 		uploadPdf(validityOfTheAdditionalContent, selectFeeExemptionDocumentbtn, saveFeeExemptionDocumentbtn);
 		Thread.sleep(10000);
 		clickBtn(viewFeeReceiptBtn);
-		Thread.sleep(2000);
+		Thread.sleep(5000);
 		clickBtn(issuingTheReceiptBtn);
-		Thread.sleep(2000);
+		Thread.sleep(5000);
 		clickBtn(displayTheCertificateBtn);
 	}
-	public void terroristGroups(String benfcNormalPersonId,String tGextraContent ,String exemptionReason) throws InterruptedException
-	{
+
+	public void terroristGroups(String benfcNormalPersonId, String tGextraContent, String exemptionReason)
+			throws InterruptedException {
 		clickBtn(addBtn);
 		fluentWait(certTypeMajorElement);
-		selectFromDropDownNGList(certTypeMajorElement,certTypeMinorTerroristGroups);
-		addNormalPerson(brotstoBeneficiaryTypeOfTheCertificate, brotstoBenfcNormalPerson, nationalIdField, benfcNormalPersonId, searchPersonBtn,savePersonBtn);
+		selectFromDropDownNGList(certTypeMajorElement, certTypeMinorTerroristGroups);
+		Thread.sleep(4000);
+
+		addNormalPerson(brotstoBeneficiaryTypeOfTheCertificate, brotstoBenfcNormalPerson, nationalIdField,
+				benfcNormalPersonId, searchPersonBtn, savePersonBtn);
 		Thread.sleep(200);
 		setTxtInAnotherWay(terroristGExtraContent, tGextraContent);
 		Thread.sleep(500);
@@ -280,14 +292,18 @@ public class CertificatesPage extends PageBase
 		Thread.sleep(4000);
 		clickBtn(tGdisplayTheCertificateBtn);
 	}
-	public void caseDoesNotExist(String benfcNormalPersonId, String caseByWhome, String s_e_month , String extraContent , String exemptionReason) throws InterruptedException
-	{
+
+	public void caseDoesNotExist(String benfcNormalPersonId, String caseByWhome, String s_e_month, String extraContent,
+			String exemptionReason) throws InterruptedException {
 		clickBtn(addBtn);
 		fluentWait(certTypeMajorElement);
-		selectFromDropDownNGList(certTypeMajorElement,certTypeMinorNotExistedCase);
-		addNormalPerson(brotstoBeneficiaryTypeOfTheCertificate, brotstoBenfcNormalPerson, nationalIdField, benfcNormalPersonId, searchPersonBtn,savePersonBtn);
+		selectFromDropDownNGList(certTypeMajorElement, certTypeMinorNotExistedCase);
+		Thread.sleep(4000);
+
+		addNormalPerson(brotstoBeneficiaryTypeOfTheCertificate, brotstoBenfcNormalPerson, nationalIdField,
+				benfcNormalPersonId, searchPersonBtn, savePersonBtn);
 		Thread.sleep(500);
-		setTxtInAnotherWay(caseBy,caseByWhome);
+		setTxtInAnotherWay(caseBy, caseByWhome);
 		selectFromDropDownNGList(tDClassificationTableMajor, tDClassificationMinorRentals);
 		selectFromDropDownNGList(tDCourtMajor, tDCourtMinorSouthCairo);
 		selectCalenderDate(dStartDate, dSMonth, s_e_month, dFDofJan);
@@ -311,20 +327,21 @@ public class CertificatesPage extends PageBase
 		clickBtn(dDisplayCertificateBtn);
 
 	}
-	public void appealCase(String serialCaseNum,String exemptionReason) throws InterruptedException
-	{
+
+	public void appealCase(String serialCaseNum, String exemptionReason) throws InterruptedException {
 		clickBtn(addBtn);
 		fluentWait(certTypeMajorElement);
-		selectFromDropDownNGList(certTypeMajorElement,certTypeMinorNoAppealNegative);
+		selectFromDropDownNGList(certTypeMajorElement, certTypeMinorNoAppealNegative);
 		clickBtn(caseSearchBtn);
 		fluentWait(courtMajorElement);
 		setTxt(caseSerialNumberField, serialCaseNum);
 		selectFromDropDownNGList(yearField, yearMinor);
 		selectFromDropDownNGList(classificationTableMajorElement, classificationTableMinorRentals);
-		selectFromDropDownNGList(courtMajorElement,courtMinorSouthCairo);
+		selectFromDropDownNGList(courtMajorElement, courtMinorSouthCairo);
 		clickBtn(searchBtn);
 		selectFromDropDownNGList(nPOfficialJudgeSchemaMajor, nPOfficialJudgeSchemaMinor);
-		selectFromDropDownNGList(BeneficiaryOfTheCertificateFromCaseMajorElement,BeneficiaryOfTheCertificateFromCaseMinorFirstPerson);
+		selectFromDropDownNGList(BeneficiaryOfTheCertificateFromCaseMajorElement,
+				BeneficiaryOfTheCertificateFromCaseMinorFirstPerson);
 		fluentWait(exemptedRadioBtn);
 		clickBtn(exemptedRadioBtn);
 		setTxt(exemptionReasonField, exemptionReason);
@@ -342,9 +359,6 @@ public class CertificatesPage extends PageBase
 		Thread.sleep(2000);
 		clickBtn(displayTheCertificateBtn);
 
-		
-		
 	}
-
 
 }

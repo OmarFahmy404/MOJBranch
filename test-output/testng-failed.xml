@@ -3,15 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="tests.PublicHearingOfInvestigationTest">
+      <class name="tests.AppealFeesTest">
         <methods>
           <include name="startDriver"/>
-          <include name="LoginAndGetInThePage"/>
+          <include name="createAppealCase"/>
           <include name="stopDriver"/>
-          <include name="finishTheHearingOfInvestigationProcessTest"/>
           <include name="screenshotOnFailure"/>
+          <include name="loginAndGetInAnnPart"/>
         </methods>
-      </class> <!-- tests.PublicHearingOfInvestigationTest -->
+      </class> <!-- tests.AppealFeesTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
