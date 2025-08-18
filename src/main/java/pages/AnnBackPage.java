@@ -39,7 +39,7 @@ public class AnnBackPage extends PageBase {
 		clickBtn(completeAnnDataBtn);
 		Thread.sleep(5000);
 		fluentWait(annDocBtn);
-		uploadPdf(annDocBtn, selectDocBtn, saveFileBtn);
+		uploadPdf(annDocBtn);
 		Thread.sleep(9000);
 		clickBtn(submitBtn);
 		fluentWait(confirmBtn);

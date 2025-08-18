@@ -183,7 +183,7 @@ public class AdministrativeAnnFeesPage extends PageBase {
 		clickBtn(savePersonBtn);
 
 		Thread.sleep(8000);
-		uploadPdf(addDocAnnBtn, selectDocBtn, saveDocBtn);
+		uploadPdf(addDocAnnBtn);
 		Thread.sleep(8000);
 
 		clickBtn(doneBtn);
@@ -224,7 +224,7 @@ public class AdministrativeAnnFeesPage extends PageBase {
 		clickBtn(savePersonBtn);
 
 		Thread.sleep(3000);
-		uploadPdf(addDocAnnBtn, selectDocBtn, saveDocBtn);
+		uploadPdf(addDocAnnBtn);
 		Thread.sleep(8000);
 
 		clickBtn(doneBtn);

@@ -44,7 +44,14 @@ public class PageBase {
 	static WebElement userAcc;
 	@FindBy(xpath = "/html/body/app-root/block-ui/div/inner-container/main/div/app-header/div/div/ul[2]/li/div/div/a[3]")
 	static WebElement logOutBtn;
-
+	
+	@FindBy(xpath ="/html/body/ngb-modal-window/div/div/ng-component/form/div[1]/div/div/div/div[1]/input")
+	static WebElement selectDocBtn ;
+	
+	@FindBy(xpath ="/html/body/ngb-modal-window/div/div/ng-component/form/div[2]/button[1]")
+	static WebElement saveFileBtn ;
+	
+	
 	protected static void clickBtn(WebElement button) {
 		button.click();
 	}
@@ -64,15 +71,18 @@ public class PageBase {
 		s.selectByVisibleText(month);
 	}
 
-	protected static void uploadPdf(WebElement addElementBtn, WebElement selectFile, WebElement saveElementBtn) {
-		addElementBtn.click();
-		selectFile.sendKeys(pdfPath);
-		saveElementBtn.click();
+	protected static void uploadPdf(WebElement addElementBtn) {
+		clickBtn(addElementBtn);
+		selectDocBtn.sendKeys(pdfPath);
+		fluentWait(saveFileBtn);
+		saveFileBtn.click();
 
 	}
 
-	protected static void loginProcess(WebElement userNameField, String userName, WebElement passwordField,
-			String password, WebElement loginBtn) {
+
+	protected static void loginProcess
+	(WebElement userNameField, String userName, WebElement passwordField,String password, WebElement loginBtn) 
+	{
 		fluentWait(loginBtn);
 		setTxt(userNameField, userName);
 		setTxt(passwordField, password);
@@ -98,11 +108,14 @@ public class PageBase {
 		clickBtn(addType);
 		clickBtn(addNormalPerson);
 		clickBtn(yesBtn);
+	}
+	protected static void addNormalPerson(WebElement addType, WebElement idField, String id,
+			WebElement searchBtn, WebElement saveBtn) {
+		clickBtn(addType);
 		setTxt(idField, id);
 		clickBtn(searchBtn);
 		clickBtn(saveBtn);
 	}
-
 	protected static void selectCalenderDate(WebElement calenderTab, WebElement monthTab, String month,
 			WebElement dayElement) throws InterruptedException {
 		clickBtn(calenderTab);
