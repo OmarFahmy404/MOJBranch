@@ -83,6 +83,7 @@ public class PageBase {
 	protected static void loginProcess
 	(WebElement userNameField, String userName, WebElement passwordField,String password, WebElement loginBtn) 
 	{
+
 		fluentWait(loginBtn);
 		setTxt(userNameField, userName);
 		setTxt(passwordField, password);
@@ -103,11 +104,15 @@ public class PageBase {
 		clickBtn(saveBtn);
 	}
 	
+
 	protected static void addNormalDefendantPerson(WebElement addType, WebElement addNormalPerson,WebElement yesBtn ,WebElement idField, String id,
 			WebElement searchBtn, WebElement saveBtn) {
 		clickBtn(addType);
 		clickBtn(addNormalPerson);
 		clickBtn(yesBtn);
+		setTxt(idField, id);
+		clickBtn(searchBtn);
+		clickBtn(saveBtn);
 	}
 	protected static void addNormalPerson(WebElement addType, WebElement idField, String id,
 			WebElement searchBtn, WebElement saveBtn) {
@@ -116,6 +121,7 @@ public class PageBase {
 		clickBtn(searchBtn);
 		clickBtn(saveBtn);
 	}
+
 	protected static void selectCalenderDate(WebElement calenderTab, WebElement monthTab, String month,
 			WebElement dayElement) throws InterruptedException {
 		clickBtn(calenderTab);
