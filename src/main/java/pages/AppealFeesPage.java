@@ -105,10 +105,12 @@ public class AppealFeesPage extends PageBase{
 		fluentWait(saveCaseBtn);
 		clickBtn(saveCaseBtn);
 		fluentWait(reciptEstablishBtn);
-		Thread.sleep(4000);
+		Thread.sleep(2000);
 		clickBtn(reciptEstablishBtn);
 		fluentWait(saveBtn);
 		clickBtn(saveBtn);
+		Thread.sleep(2000);
+
 	}
 	
 }

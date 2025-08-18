@@ -28,7 +28,7 @@ public class PageBase {
 
 		action = new Actions(driver);
 
-		noSuchEleWait = new FluentWait<WebDriver>(driver).withTimeout(Duration.ofSeconds(60))
+		noSuchEleWait = new FluentWait<WebDriver>(driver).withTimeout(Duration.ofSeconds(90))
 				.pollingEvery(Duration.ofSeconds(2)).ignoring(NoSuchElementException.class);
 
 		eleClkIntercWait = new FluentWait<WebDriver>(driver).withTimeout(Duration.ofSeconds(60))
@@ -79,9 +79,14 @@ public class PageBase {
 
 	}
 
+<<<<<<< HEAD
 	protected static void loginProcess
 	(WebElement userNameField, String userName, WebElement passwordField,String password, WebElement loginBtn) 
 	{
+=======
+	protected static void loginProcess(WebElement userNameField, String userName, WebElement passwordField,
+			String password, WebElement loginBtn) {
+>>>>>>> 854d76146003312ef732219cf9c3fb086a2731bd
 		fluentWait(loginBtn);
 		setTxt(userNameField, userName);
 		setTxt(passwordField, password);
@@ -102,14 +107,26 @@ public class PageBase {
 		clickBtn(saveBtn);
 	}
 	
+<<<<<<< HEAD
 	protected static void addNormalPerson(WebElement addType, WebElement idField, String id,
 			WebElement searchBtn, WebElement saveBtn) {
 		clickBtn(addType);
+=======
+	protected static void addNormalDefendantPerson(WebElement addType, WebElement addNormalPerson,WebElement yesBtn ,WebElement idField, String id,
+			WebElement searchBtn, WebElement saveBtn) {
+		clickBtn(addType);
+		clickBtn(addNormalPerson);
+		clickBtn(yesBtn);
+>>>>>>> 854d76146003312ef732219cf9c3fb086a2731bd
 		setTxt(idField, id);
 		clickBtn(searchBtn);
 		clickBtn(saveBtn);
 	}
+<<<<<<< HEAD
 	
+=======
+
+>>>>>>> 854d76146003312ef732219cf9c3fb086a2731bd
 	protected static void selectCalenderDate(WebElement calenderTab, WebElement monthTab, String month,
 			WebElement dayElement) throws InterruptedException {
 		clickBtn(calenderTab);
