@@ -213,9 +213,9 @@ public class CertificatesPage extends PageBase {
 		clickBtn(submitBtn1);
 		clickBtn(submitBtn2);
 		Thread.sleep(4000);
-		uploadPdf(addTheCertificateOrder, selectTheCertificateOrder, saveCertificateBtn);
+		uploadPdf(addTheCertificateOrder);
 		Thread.sleep(10000);
-		uploadPdf(addFeeExemptionDocumentbtn, selectFeeExemptionDocumentbtn, saveFeeExemptionDocumentbtn);
+		uploadPdf(addFeeExemptionDocumentbtn);
 		Thread.sleep(12000);
 		clickBtn(viewFeeReceiptBtn);
 		fluentWait(issuingTheReceiptBtn);
@@ -249,11 +249,11 @@ public class CertificatesPage extends PageBase {
 		Thread.sleep(4000);
 		// fluentWait(addTheCertificateOrder, "clkInterceptedEx"); Didn't work in anyway
 		// !! , and deleted from the following ones , replaced by Thread.sleep .
-		uploadPdf(addTheCertificateOrder, selectTheCertificateOrder, saveCertificateBtn);
+		uploadPdf(addTheCertificateOrder);
 		Thread.sleep(8000);
-		uploadPdf(addFeeExemptionDocumentbtn, selectFeeExemptionDocumentbtn, saveFeeExemptionDocumentbtn);
+		uploadPdf(addFeeExemptionDocumentbtn);
 		Thread.sleep(10000);
-		uploadPdf(validityOfTheAdditionalContent, selectFeeExemptionDocumentbtn, saveFeeExemptionDocumentbtn);
+		uploadPdf(validityOfTheAdditionalContent);
 		Thread.sleep(10000);
 		clickBtn(viewFeeReceiptBtn);
 		Thread.sleep(5000);
@@ -280,11 +280,11 @@ public class CertificatesPage extends PageBase {
 		clickBtn(tGsubmitBtn1);
 		clickBtn(tGsubmitBtn2);
 		Thread.sleep(4000);
-		uploadPdf(tGaddTheCertificateOrder, selectTheCertificateOrder, saveCertificateBtn);
+		uploadPdf(tGaddTheCertificateOrder);
 		Thread.sleep(8000);
-		uploadPdf(tGaddFeeExemptionDocumentbtn, selectFeeExemptionDocumentbtn, saveFeeExemptionDocumentbtn);
+		uploadPdf(tGaddFeeExemptionDocumentbtn);
 		Thread.sleep(8000);
-		uploadPdf(tGvalidityOfTheAdditionalContent, selectFeeExemptionDocumentbtn, saveFeeExemptionDocumentbtn);
+		uploadPdf(tGvalidityOfTheAdditionalContent);
 		Thread.sleep(9000);
 		clickBtn(tGviewFeeReceiptBtn);
 		fluentWait(tGissuingTheReceiptBtn);
@@ -314,11 +314,11 @@ public class CertificatesPage extends PageBase {
 		clickBtn(dSubmitBtn);
 		clickBtn(submitBtn2);
 		Thread.sleep(3000);
-		uploadPdf(dAddCetificateOrderDocumentBtn, selectTheCertificateOrder, saveCertificateBtn);
+		uploadPdf(dAddCetificateOrderDocumentBtn);
 		Thread.sleep(7500);
-		uploadPdf(dAddFeeExemptionDocumentBtn, selectFeeExemptionDocumentbtn, saveFeeExemptionDocumentbtn);
+		uploadPdf(dAddFeeExemptionDocumentBtn);
 		Thread.sleep(7500);
-		uploadPdf(dAddValidationDocumentBtn, selectPermissionBtn, savePermissionBtn);
+		uploadPdf(dAddValidationDocumentBtn);
 		Thread.sleep(7500);
 		clickBtn(dViewFeeReceiptBtn);
 		fluentWait(dissuingTheReceiptBtn);
@@ -349,9 +349,9 @@ public class CertificatesPage extends PageBase {
 		clickBtn(submitBtn1);
 		clickBtn(submitBtn2);
 		Thread.sleep(2000);
-		uploadPdf(addTheCertificateOrder, selectTheCertificateOrder, saveCertificateBtn);
+		uploadPdf(addTheCertificateOrder);
 		Thread.sleep(7500);
-		uploadPdf(addFeeExemptionDocumentbtn, selectFeeExemptionDocumentbtn, saveFeeExemptionDocumentbtn);
+		uploadPdf(addFeeExemptionDocumentbtn);
 		Thread.sleep(7500);
 		clickBtn(viewFeeReceiptBtn);
 		fluentWait(issuingTheReceiptBtn);

@@ -47,7 +47,7 @@ public class WarningsBackPage extends PageBase
 		clickBtn(completeWarDataBtn);
 		Thread.sleep(2000);
 		fluentWait(warDocBtn);
-		uploadPdf(warDocBtn, selectDocBtn, saveFileBtn);
+		uploadPdf(warDocBtn);
 		Thread.sleep(9000);
 		clickBtn(submitBtn);
 		fluentWait(confirmBtn);

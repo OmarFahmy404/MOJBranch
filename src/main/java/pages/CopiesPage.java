@@ -159,7 +159,7 @@ public class CopiesPage extends PageBase {
 		selectFromDropDownNGList(rCBeneficiaryOfTheCopyMajor, rCBeneficiaryOfTheCopyMinor);
 		clickBtn(copySubmitBtn);
 		Thread.sleep(2500);
-		uploadPdf(rCAddCopyOrderDocumentBtn, cePageElement.selectPermissionBtn, cePageElement.savePermissionBtn);
+		uploadPdf(rCAddCopyOrderDocumentBtn);
 		Thread.sleep(8000);
 		clickBtn(copyViewFeeReceiptBtn);
 		fluentWait(issuingRecipt);
@@ -190,9 +190,9 @@ public class CopiesPage extends PageBase {
 		clickBtn(submitDeclarationRadioBtn);
 		clickBtn(copySubmitBtn);
 		Thread.sleep(2500);
-		uploadPdf(rCAddCopyOrderDocumentBtn, cePageElement.selectPermissionBtn, cePageElement.savePermissionBtn);
+		uploadPdf(rCAddCopyOrderDocumentBtn);
 		Thread.sleep(7000);
-		uploadPdf(declarationAddDocBtn, cePageElement.selectPermissionBtn, cePageElement.savePermissionBtn);
+		uploadPdf(declarationAddDocBtn);
 		Thread.sleep(7000);
 		clickBtn(copyViewFeeReceiptBtn);
 		fluentWait(issuingRecipt);
@@ -220,7 +220,7 @@ public class CopiesPage extends PageBase {
 		selectFromDropDownNGList(oJCBeneficiaryMajor, oJCBeneficiaryScPersonMinor);
 		clickBtn(oJCSaveBtn);
 		Thread.sleep(4500);
-		uploadPdf(addOJCDocBtn, cePageElement.selectPermissionBtn, cePageElement.savePermissionBtn);
+		uploadPdf(addOJCDocBtn);
 		Thread.sleep(7000);
 		clickBtn(oJCViewFeeReceiptBtn);
 		fluentWait(issuingRecipt);
@@ -248,7 +248,7 @@ public class CopiesPage extends PageBase {
 		selectFromDropDownNGList(dFBeneficiaryMajor, dFBeneficiaryFPMinor);
 		clickBtn(copySubmitBtn);
 		Thread.sleep(2500);
-		uploadPdf(rCAddCopyOrderDocumentBtn, cePageElement.selectPermissionBtn, cePageElement.savePermissionBtn);
+		uploadPdf(rCAddCopyOrderDocumentBtn);
 		Thread.sleep(8000);
 		clickBtn(copyViewFeeReceiptBtn);
 		fluentWait(issuingRecipt);
