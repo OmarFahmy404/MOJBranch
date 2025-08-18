@@ -94,17 +94,16 @@ public class AppealBackPage extends PageBase {
 		clickBtn(authorizationBtn);
 		
 		fluentWait(establishedCountryMajor);
+		Thread.sleep(2000);
 		selectFromDropDownNGList(establishedCountryMajor, secondSelectMinor);
-		Thread.sleep(Duration.ofSeconds(1));
+		Thread.sleep(2000);
 		selectFromDropDownNGList(establishedYearMajor, secondSelectMinor);
-		Thread.sleep(Duration.ofSeconds(1));
 		selectFromDropDownNGList(authorizationTypeMajor, secondSelectMinor);
-		Thread.sleep(Duration.ofSeconds(1));
+		Thread.sleep(2000);
 		setTxt(egyptianMofaCertificationNumberTxt, differentNo);
-		Thread.sleep(Duration.ofSeconds(1));
+		Thread.sleep(2000);
 		clickBtn(showBtn);
 		
-		Thread.sleep(Duration.ofSeconds(1));
 		selectFromDropDownNGList(editorTypeHasPowerOfAttorneyMajor, secondSelectMinor);
 		fluentWait(addNormalPersonBtn);
 		addNormalPerson(addNormalPersonBtn, nationalIdTxt, idNo, searchBtn, submitBtn);
@@ -112,7 +111,6 @@ public class AppealBackPage extends PageBase {
 		fluentWait(saveBtn);
 		clickBtn(saveBtn);
 		
-		Thread.sleep(Duration.ofSeconds(1));
 		clickBtn(closeBtn);
 		
 		fluentWait(originalOfTheLawsuitBtn);
@@ -121,18 +119,14 @@ public class AppealBackPage extends PageBase {
 		fluentWait(originalOfTheLawsuitBtn);
 		uploadPdf(originalOfTheLawsuitBtn);
 		fluentWait(divisionCommitteeReportBtn);
-		Thread.sleep(Duration.ofSeconds(2));
 		uploadPdf(divisionCommitteeReportBtn);
 		
 	
-		Thread.sleep(Duration.ofSeconds(2));
 
 		fluentWait(theLastSaveBtn);
 		clickBtn(theLastSaveBtn);
 		fluentWait(doneBtn);
-		Thread.sleep(Duration.ofSeconds(2));
 		clickBtn(doneBtn);
-		Thread.sleep(Duration.ofSeconds(2));
 		clickBtn(confirmBtn);
 	}
 	

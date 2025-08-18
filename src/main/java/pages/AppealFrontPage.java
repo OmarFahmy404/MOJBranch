@@ -65,13 +65,14 @@ public class AppealFrontPage extends PageBase
 	WebElement lastSaveBtn ;
 	
 	
-	public void addInfoToCase(String normalPersonIdNumber,String normalDefendantPersonIdNumber)
+	public void addInfoToCase(String normalPersonIdNumber,String normalDefendantPersonIdNumber) throws InterruptedException
 	{
 		fluentWait(requestsForRegistrationOfAppealCasesTab);
 		clickBtn(requestsForRegistrationOfAppealCasesTab);
 		fluentWait(objectionToTheDivisionCommitteeBtn);
 		clickBtn(objectionToTheDivisionCommitteeBtn);
-		fluentWait(annTypeMajor);
+		//fluentWait(annTypeMajor);
+		Thread.sleep(39000);
 		selectFromDropDownNGList(tableClassificationMajor, testSeleniumClassificationMinor);
 		selectFromDropDownNGList(caseNameMajor, caseNameMinor);
 		selectFromDropDownNGList(annTypeMajor, annTypeMinor);

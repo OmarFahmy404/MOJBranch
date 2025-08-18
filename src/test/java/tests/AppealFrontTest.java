@@ -20,7 +20,7 @@ public class AppealFrontTest extends TestBase
 
 	}
 	@Test
-	public void testAddingInfoIntoAppealCase()
+	public void testAddingInfoIntoAppealCase() throws InterruptedException
 	{
 		appealFrontPage = new AppealFrontPage(driver);
 		appealFrontPage.addInfoToCase("26111111111111", "24111111111111");
