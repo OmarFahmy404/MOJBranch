@@ -62,11 +62,23 @@ public class AppealFrontPage extends PageBase
 	WebElement yesBtn;
 
 	@FindBy(xpath ="/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/form/div[5]/button[1]")
-	WebElement LastSaveBtn ;
+	WebElement lastSaveBtn ;
 	
 	
-	public void addInfoToCase()
+	public void addInfoToCase(String normalPersonIdNumber,String normalDefendantPersonIdNumber)
 	{
+		fluentWait(requestsForRegistrationOfAppealCasesTab);
+		clickBtn(requestsForRegistrationOfAppealCasesTab);
+		fluentWait(objectionToTheDivisionCommitteeBtn);
+		clickBtn(objectionToTheDivisionCommitteeBtn);
+		fluentWait(annTypeMajor);
+		selectFromDropDownNGList(tableClassificationMajor, testSeleniumClassificationMinor);
+		selectFromDropDownNGList(caseNameMajor, caseNameMinor);
+		selectFromDropDownNGList(annTypeMajor, annTypeMinor);
 		
+		addNormalPerson(addPlaintiffDropdownMenuButton, addNormalPersonBtn, idField,normalPersonIdNumber, searchBtn, saveBtn);
+		addNormalDefendantPerson(addDefendantDropdownMenuButton, addNormalDefendantPersonBtn,yesBtn, idField, normalDefendantPersonIdNumber, searchBtn, saveBtn);
+		fluentWait(lastSaveBtn);
+		clickBtn(lastSaveBtn);
 	}
 }

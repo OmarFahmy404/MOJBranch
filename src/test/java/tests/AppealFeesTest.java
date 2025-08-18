@@ -15,9 +15,8 @@ public class AppealFeesTest extends TestBase
 	AppealFeesPage appealFeesPage;
 
 	@BeforeMethod
-	public void loginAndGetInAnnPart() {
+	public void loginAndGetInAppealFeesPart() {
 		loginPage = new LoginPage(driver);
-		//loginPage.fluentWait(loginPage.userNameField);
 		loginPage.loginData("fees.es", "Admin123");
 
 	}

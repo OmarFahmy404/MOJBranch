@@ -28,7 +28,7 @@ public class PageBase {
 
 		action = new Actions(driver);
 
-		noSuchEleWait = new FluentWait<WebDriver>(driver).withTimeout(Duration.ofSeconds(60))
+		noSuchEleWait = new FluentWait<WebDriver>(driver).withTimeout(Duration.ofSeconds(90))
 				.pollingEvery(Duration.ofSeconds(2)).ignoring(NoSuchElementException.class);
 
 		eleClkIntercWait = new FluentWait<WebDriver>(driver).withTimeout(Duration.ofSeconds(60))
@@ -73,9 +73,10 @@ public class PageBase {
 
 	protected static void loginProcess(WebElement userNameField, String userName, WebElement passwordField,
 			String password, WebElement loginBtn) {
-		userNameField.sendKeys(userName);
-		passwordField.sendKeys(password);
-		loginBtn.click();
+		fluentWait(loginBtn);
+		setTxt(userNameField, userName);
+		setTxt(passwordField, password);
+		clickBtn(loginBtn);
 	}
 
 	protected static void selectFromDropDownNGList(WebElement majorElement, WebElement minorElement) {
@@ -87,6 +88,16 @@ public class PageBase {
 			WebElement searchBtn, WebElement saveBtn) {
 		clickBtn(addType);
 		clickBtn(addNormalPerson);
+		setTxt(idField, id);
+		clickBtn(searchBtn);
+		clickBtn(saveBtn);
+	}
+	
+	protected static void addNormalDefendantPerson(WebElement addType, WebElement addNormalPerson,WebElement yesBtn ,WebElement idField, String id,
+			WebElement searchBtn, WebElement saveBtn) {
+		clickBtn(addType);
+		clickBtn(addNormalPerson);
+		clickBtn(yesBtn);
 		setTxt(idField, id);
 		clickBtn(searchBtn);
 		clickBtn(saveBtn);
