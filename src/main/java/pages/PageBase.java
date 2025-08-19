@@ -16,6 +16,8 @@ import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.Wait;
 
+
+
 public class PageBase {
 
 	protected static WebDriver driver;
@@ -28,7 +30,7 @@ public class PageBase {
 
 		action = new Actions(driver);
 
-		noSuchEleWait = new FluentWait<WebDriver>(driver).withTimeout(Duration.ofSeconds(90))
+		noSuchEleWait = new FluentWait<WebDriver>(driver).withTimeout(Duration.ofSeconds(30))
 				.pollingEvery(Duration.ofSeconds(2)).ignoring(NoSuchElementException.class);
 
 		eleClkIntercWait = new FluentWait<WebDriver>(driver).withTimeout(Duration.ofSeconds(60))
@@ -42,7 +44,7 @@ public class PageBase {
 
 	@FindBy(xpath = "/html/body/app-root/block-ui/div/inner-container/main/div/app-header/div/div/ul[2]/li/div")
 	static WebElement userAcc;
-	@FindBy(xpath = "/html/body/app-root/block-ui/div/inner-container/main/div/app-header/div/div/ul[2]/li/div/div/a[3]")
+	@FindBy(xpath = "/html/body/app-root/block-ui/div/inner-container/main/div/app-header/div/div/ul[2]/li/div/div/a[4]")
 	static WebElement logOutBtn;
 	
 	@FindBy(xpath ="/html/body/ngb-modal-window/div/div/ng-component/form/div[1]/div/div/div/div[1]/input")
@@ -50,6 +52,47 @@ public class PageBase {
 	
 	@FindBy(xpath ="/html/body/ngb-modal-window/div/div/ng-component/form/div[2]/button[1]")
 	static WebElement saveFileBtn ;
+	
+	@FindBy(name = "nationalId")
+	static WebElement idField ;
+	
+	@FindBy(xpath = "/html/body/ngb-modal-window/div/div/ng-component/form[1]/div/div/div/div[1]/div[2]/button")
+	static WebElement searchBtn ;
+	
+	@FindBy(xpath = "/html/body/ngb-modal-window/div/div/ng-component/form[2]/div[1]/div[4]/div[2]/div[1]/div/div/button")
+	static WebElement sameResidenceAddressBtn ;
+	
+	@FindBy(xpath = "/html/body/ngb-modal-window/div/div/ng-component/form[2]/div[1]/div[4]/div[2]/div[6]/div/ng-select/div/div/div[2]")
+	static WebElement  penMajor;
+	
+	@FindBy(xpath = "/html/body/ngb-modal-window/div/div/ng-component/form[2]/div[1]/div[4]/div[2]/div[6]/div/ng-select/ng-dropdown-panel/div/div[2]/div[1]")
+	static WebElement  penMinor;
+	
+	@FindBy(id = "inPerson")
+	static WebElement withHimSelfCheckBox ;
+	
+	@FindBy(xpath = "/html/body/ngb-modal-window/div/div/ng-component/form[2]/div[2]/button[1]")
+	static WebElement saveBtn;
+	
+	@FindBy(xpath = "/html/body/ngb-modal-window/div/div/ng-component/form[1]/div/div/div[1]/div/div/div[1]/a/i")
+	static WebElement yesBtn;
+
+	@FindBy(xpath = "/html/body/ngb-modal-window/div/div/ng-component/form[1]/div/div/div[2]/div/div[1]/div[2]/button")
+	static WebElement defSearchBtn ;
+	
+	@FindBy(name="caseSerialNumber")
+	static WebElement serialNoSearchFiled;
+	
+	@FindBy(name = "classificationId")
+	static WebElement  classificationIdField; 
+	
+	@FindBy(css = "button.btn.btn-block.btn-search-outline")
+	static WebElement caseSearchBtn;
+	
+	@FindBy(xpath = "/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/div/div[1]/div/form/div[1]/div[4]/ng-select/ng-dropdown-panel/div/div[2]/div")
+	static WebElement selectItem;
+	
+	
 	
 	
 	protected static void clickBtn(WebElement button) {
@@ -79,14 +122,11 @@ public class PageBase {
 
 	}
 
-<<<<<<< HEAD
+
 	protected static void loginProcess
 	(WebElement userNameField, String userName, WebElement passwordField,String password, WebElement loginBtn) 
 	{
-=======
-	protected static void loginProcess(WebElement userNameField, String userName, WebElement passwordField,
-			String password, WebElement loginBtn) {
->>>>>>> 854d76146003312ef732219cf9c3fb086a2731bd
+
 		fluentWait(loginBtn);
 		setTxt(userNameField, userName);
 		setTxt(passwordField, password);
@@ -107,26 +147,67 @@ public class PageBase {
 		clickBtn(saveBtn);
 	}
 	
-<<<<<<< HEAD
-	protected static void addNormalPerson(WebElement addType, WebElement idField, String id,
-			WebElement searchBtn, WebElement saveBtn) {
-		clickBtn(addType);
-=======
-	protected static void addNormalDefendantPerson(WebElement addType, WebElement addNormalPerson,WebElement yesBtn ,WebElement idField, String id,
-			WebElement searchBtn, WebElement saveBtn) {
+
+	protected static void addNormalDefendantPersonWithFullData
+	(WebElement addType, WebElement addNormalPerson, String id)
+	{
 		clickBtn(addType);
 		clickBtn(addNormalPerson);
 		clickBtn(yesBtn);
->>>>>>> 854d76146003312ef732219cf9c3fb086a2731bd
 		setTxt(idField, id);
-		clickBtn(searchBtn);
+		clickBtn(defSearchBtn);
+		clickBtn(sameResidenceAddressBtn);
+		selectFromDropDownNGList(penMajor, penMinor);
+		clickBtn(withHimSelfCheckBox);
 		clickBtn(saveBtn);
 	}
-<<<<<<< HEAD
 	
-=======
+	
+	protected static void addNormalPerson(WebElement addType, WebElement idField, String id,
+			WebElement searchBtn, WebElement saveBtn) throws InterruptedException {
+		clickBtn(addType);
+		setTxt(idField, id);
+		clickBtn(searchBtn);
+		Thread.sleep(Duration.ofSeconds(1));
+		clickBtn(saveBtn);	
+		
+	}
+	
+	
+	protected static void addNormalPersonWithFullData
+	(WebElement addType, WebElement addNormalPerson, String id) 
+	{
+		clickBtn(addType);
+		clickBtn(addNormalPerson);
+		setTxt(idField, id);
+		clickBtn(searchBtn);
+		clickBtn(sameResidenceAddressBtn);
+		selectFromDropDownNGList(penMajor, penMinor);
+		clickBtn(withHimSelfCheckBox);
+		clickBtn(saveBtn);
+	}
+	
+	
+	
+	protected static void caseSearch(String caseNo , String caseClassification) throws InterruptedException
+	{
+		fluentWait(caseSearchBtn);
+		setTxt(serialNoSearchFiled, caseNo);
+		setTxtInAnotherWay(classificationIdField, caseClassification);
+		clickBtn(selectItem);
+		clickBtn(caseSearchBtn);
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
->>>>>>> 854d76146003312ef732219cf9c3fb086a2731bd
 	protected static void selectCalenderDate(WebElement calenderTab, WebElement monthTab, String month,
 			WebElement dayElement) throws InterruptedException {
 		clickBtn(calenderTab);
@@ -176,7 +257,7 @@ public class PageBase {
 	}
 
 	public static void loggedOut() throws InterruptedException {
-		Thread.sleep(8000);
+		Thread.sleep(4000);
 		escapeMove();
 		fluentWait(userAcc);
 		clickBtn(userAcc);

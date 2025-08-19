@@ -3,6 +3,7 @@ package tests;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import pages.AppealCaseInfoPage;
 import pages.AppealFeesPage;
 import pages.AppealFrontPage;
 import pages.LoginPage;
@@ -20,10 +21,11 @@ public class AppealFrontTest extends TestBase
 
 	}
 	@Test
-	public void testAddingInfoIntoAppealCase()
+	public void testAddingInfoIntoAppealCase() throws InterruptedException
 	{
 		appealFrontPage = new AppealFrontPage(driver);
-		appealFrontPage.addInfoToCase("26111111111111", "24111111111111");
+		appealFrontPage.addInfoToCase("29911111111111", "28811111111111");
+		
 	}
 	
 }

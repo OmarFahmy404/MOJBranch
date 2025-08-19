@@ -25,7 +25,7 @@ public class TestBase {
 
 	@AfterTest
 	public void stopDriver() {
-		//driver.close();
+		driver.close();
 	}
 
 	@AfterMethod
@@ -41,7 +41,7 @@ public class TestBase {
 
 			Helper.captureScreenshot(driver, result.getName());
 		}
-	//	base.loggedOut();
+		base.loggedOut();
 
 	}
 

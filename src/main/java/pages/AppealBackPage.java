@@ -13,6 +13,9 @@ public class AppealBackPage extends PageBase {
 		// TODO Auto-generated constructor stub
 	}
 
+	
+	AppealFrontPage appealFrontPage;
+	
 	@FindBy(css ="a[href=\'#/new-case-filing/list\']")
 	WebElement appealCasesTab ;
 	
@@ -82,29 +85,29 @@ public class AppealBackPage extends PageBase {
 	@FindBy( css="button.swal2-confirm.swal2-styled.swal2-default-outline")
 	WebElement confirmBtn ;
 	
+	
+	
 	public void addingInfoIntoDivisionCommitteeCase(String differentNo,String idNo) throws InterruptedException 
 	{
 		fluentWait(appealCasesTab);
 		clickBtn(appealCasesTab);
 		
+		caseSearch(HelperPage.getData("Case Number"), HelperPage.getData("Case Classification"));
+		
+		Thread.sleep(Duration.ofSeconds(1));
 		fluentWait(fillingDataBtn);
 		clickBtn(fillingDataBtn);
 		
-		
+		fluentWait(authorizationBtn);
 		clickBtn(authorizationBtn);
 		
 		fluentWait(establishedCountryMajor);
 		selectFromDropDownNGList(establishedCountryMajor, secondSelectMinor);
-		Thread.sleep(Duration.ofSeconds(1));
 		selectFromDropDownNGList(establishedYearMajor, secondSelectMinor);
-		Thread.sleep(Duration.ofSeconds(1));
 		selectFromDropDownNGList(authorizationTypeMajor, secondSelectMinor);
-		Thread.sleep(Duration.ofSeconds(1));
 		setTxt(egyptianMofaCertificationNumberTxt, differentNo);
-		Thread.sleep(Duration.ofSeconds(1));
 		clickBtn(showBtn);
-		
-		Thread.sleep(Duration.ofSeconds(1));
+		fluentWait(editorTypeHasPowerOfAttorneyMajor);
 		selectFromDropDownNGList(editorTypeHasPowerOfAttorneyMajor, secondSelectMinor);
 		fluentWait(addNormalPersonBtn);
 		addNormalPerson(addNormalPersonBtn, nationalIdTxt, idNo, searchBtn, submitBtn);
@@ -112,7 +115,8 @@ public class AppealBackPage extends PageBase {
 		fluentWait(saveBtn);
 		clickBtn(saveBtn);
 		
-		Thread.sleep(Duration.ofSeconds(1));
+
+		Thread.sleep(Duration.ofSeconds(2));
 		clickBtn(closeBtn);
 		
 		fluentWait(originalOfTheLawsuitBtn);
@@ -120,19 +124,16 @@ public class AppealBackPage extends PageBase {
 
 		fluentWait(originalOfTheLawsuitBtn);
 		uploadPdf(originalOfTheLawsuitBtn);
-		fluentWait(divisionCommitteeReportBtn);
-		Thread.sleep(Duration.ofSeconds(2));
+		Thread.sleep(Duration.ofSeconds(3));
 		uploadPdf(divisionCommitteeReportBtn);
 		
 	
-		Thread.sleep(Duration.ofSeconds(2));
 
-		fluentWait(theLastSaveBtn);
+		Thread.sleep(2000);
 		clickBtn(theLastSaveBtn);
-		fluentWait(doneBtn);
-		Thread.sleep(Duration.ofSeconds(2));
+		Thread.sleep(1500);
 		clickBtn(doneBtn);
-		Thread.sleep(Duration.ofSeconds(2));
+		Thread.sleep(1500);
 		clickBtn(confirmBtn);
 	}
 	

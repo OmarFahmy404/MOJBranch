@@ -3,6 +3,8 @@ package tests;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import com.github.javafaker.Faker;
+
 import pages.AppealBackPage;
 import pages.LoginPage;
 
@@ -23,7 +25,7 @@ public class AppealBackTest extends TestBase
 	public void testAddingInfoIntoDivisionCommitteeCase() throws InterruptedException 
 	{
 		appealBackPage=new AppealBackPage(driver);
-		appealBackPage.addingInfoIntoDivisionCommitteeCase("972642","29811111111124");
+		appealBackPage.addingInfoIntoDivisionCommitteeCase(String.valueOf(new Faker().number()),"29811111111124");
 	}
 	
 }
