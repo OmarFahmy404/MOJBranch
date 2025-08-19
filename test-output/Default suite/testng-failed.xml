@@ -3,27 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-<<<<<<< HEAD
-      <class name="tests.AppealBackTest">
-=======
       <class name="tests.AppealFrontTest">
->>>>>>> 854d76146003312ef732219cf9c3fb086a2731bd
         <methods>
-          <include name="testAddingInfoIntoDivisionCommitteeCase"/>
           <include name="startDriver"/>
           <include name="stopDriver"/>
-<<<<<<< HEAD
-          <include name="loginAndGetInAppealPart"/>
-          <include name="screenshotOnFailure"/>
-        </methods>
-      </class> <!-- tests.AppealBackTest -->
-=======
           <include name="testAddingInfoIntoAppealCase"/>
           <include name="screenshotOnFailure"/>
           <include name="loginAndGetInAppealFrontPart"/>
         </methods>
       </class> <!-- tests.AppealFrontTest -->
->>>>>>> 854d76146003312ef732219cf9c3fb086a2731bd
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
