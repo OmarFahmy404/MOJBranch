@@ -1,31 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Trunk 58 Appeal Cases Suite]">
-  <test thread-count="5" name="Appeal Cases Test(failed)">
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="tests.AppealFrontTest">
-        <methods>
-          <include name="startDriver"/>
-          <include name="stopDriver"/>
-          <include name="testAddingInfoIntoAppealCase"/>
-          <include name="screenshotOnFailure"/>
-          <include name="loginAndGetInAppealFrontPart"/>
-        </methods>
-      </class> <!-- tests.AppealFrontTest -->
-      <class name="tests.AppealBackTest">
-        <methods>
-          <include name="testAddingInfoIntoDivisionCommitteeCase"/>
-          <include name="startDriver"/>
-          <include name="stopDriver"/>
-          <include name="loginAndGetInAppealPart"/>
-          <include name="screenshotOnFailure"/>
-        </methods>
-      </class> <!-- tests.AppealBackTest -->
       <class name="tests.AppealFeesTest">
         <methods>
+          <include name="createLaborArbitrationCase"/>
+          <include name="startDriver"/>
           <include name="stopDriver"/>
+          <include name="screenshotOnFailure"/>
+          <include name="loginAndGetInAppealFeesPart"/>
         </methods>
       </class> <!-- tests.AppealFeesTest -->
     </classes>
-  </test> <!-- Appeal Cases Test(failed) -->
-</suite> <!-- Failed suite [Trunk 58 Appeal Cases Suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

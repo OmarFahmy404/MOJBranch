@@ -102,6 +102,5 @@ public 	String caseClassification=null;
 		HelperPage.saveDate("Case Number", caseNo);
 		HelperPage.saveDate("Case Classification", caseClassification);
 		
-		System.out.println(caseNo +" //"+ caseClassification);
 	}
 }

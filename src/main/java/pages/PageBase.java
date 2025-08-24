@@ -168,7 +168,7 @@ public class PageBase {
 		clickBtn(addType);
 		setTxt(idField, id);
 		clickBtn(searchBtn);
-		Thread.sleep(Duration.ofSeconds(1));
+		Thread.sleep(1000);
 		clickBtn(saveBtn);	
 		
 	}
@@ -218,16 +218,7 @@ public class PageBase {
 		clickBtn(dayElement);
 	}
 
-	/*
-	 * public static void fluentWait(WebElement element , String
-	 * expectedConditionsString) { if(expectedConditionsString=="noSuchElementEx") {
-	 * noSuchEleWait.until(ExpectedConditions.visibilityOf(element)); }else if
-	 * (expectedConditionsString=="clkInterceptedEx")
-	 * 
-	 * eleClkIntercWait.until(ExpectedConditions.elementToBeClickable(element));
-	 * 
-	 * }else if(ex
-	 */
+
 	public static void fluentWait(WebElement element) {
 
 		noSuchEleWait.until(ExpectedConditions.visibilityOf(element));

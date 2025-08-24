@@ -41,7 +41,7 @@ public class TestBase {
 
 			Helper.captureScreenshot(driver, result.getName());
 		}
-		base.loggedOut();
+	//	base.loggedOut();
 
 	}
 

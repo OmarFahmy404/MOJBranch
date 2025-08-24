@@ -1,82 +1,114 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="4" total="7" passed="3" failed="0" skipped="0">
+<testng-results ignored="1" total="2" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-08-19T16:34:30 EEST" name="Trunk 58 Appeal Cases Suite" finished-at="2025-08-19T16:35:42 EEST" duration-ms="71762">
+  <suite started-at="2025-08-21T12:50:02 EEST" name="Default suite" finished-at="2025-08-21T12:51:21 EEST" duration-ms="78938">
     <groups>
     </groups>
-    <test started-at="2025-08-19T16:34:30 EEST" name="Appeal Cases Test" finished-at="2025-08-19T16:35:42 EEST" duration-ms="71762">
+    <test started-at="2025-08-21T12:50:02 EEST" name="Default test" finished-at="2025-08-21T12:51:21 EEST" duration-ms="78938">
       <class name="tests.AppealFeesTest">
-        <test-method is-config="true" signature="startDriver()[pri:0, instance:tests.AppealFeesTest@76f4b65]" started-at="2025-08-19T16:34:30 EEST" name="startDriver" finished-at="2025-08-19T16:34:33 EEST" duration-ms="2164" status="PASS">
+        <test-method is-config="true" signature="startDriver()[pri:0, instance:tests.AppealFeesTest@2f67b837]" started-at="2025-08-21T12:50:02 EEST" name="startDriver" finished-at="2025-08-21T12:50:33 EEST" duration-ms="31007" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startDriver -->
-        <test-method is-config="true" signature="loginAndGetInAppealFeesPart()[pri:0, instance:tests.AppealFeesTest@76f4b65]" started-at="2025-08-19T16:34:33 EEST" name="loginAndGetInAppealFeesPart" finished-at="2025-08-19T16:34:33 EEST" duration-ms="513" status="PASS">
+        <test-method is-config="true" signature="loginAndGetInAppealFeesPart()[pri:0, instance:tests.AppealFeesTest@2f67b837]" started-at="2025-08-21T12:50:33 EEST" name="loginAndGetInAppealFeesPart" finished-at="2025-08-21T12:50:41 EEST" duration-ms="7207" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginAndGetInAppealFeesPart -->
-        <test-method signature="createAppealCase()[pri:0, instance:tests.AppealFeesTest@76f4b65]" started-at="2025-08-19T16:34:33 EEST" name="createAppealCase" finished-at="2025-08-19T16:34:46 EEST" duration-ms="13029" status="PASS">
+        <test-method signature="createLaborArbitrationCase()[pri:0, instance:tests.AppealFeesTest@2f67b837]" started-at="2025-08-21T12:50:41 EEST" name="createLaborArbitrationCase" finished-at="2025-08-21T12:51:20 EEST" duration-ms="39226" status="FAIL">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.cssSelector: button.btn.btn-add-outline' (tried for 30 second(s) with 2000 milliseconds interval)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.cssSelector: button.btn.btn-add-outline' (tried for 30 second(s) with 2000 milliseconds interval)
+at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:265)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+at pages.PageBase.fluentWait(PageBase.java:224)
+at pages.AppealFeesPage.createLaborArbitrationCase(AppealFeesPage.java:124)
+at tests.AppealFeesTest.createLaborArbitrationCase(AppealFeesTest.java:36)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:829)
+at org.testng.TestRunner.run(TestRunner.java:602)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"button.btn.btn-add-outline"}
+  (Session info: chrome=138.0.7204.184)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.23.0', revision: '4df0a231af'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [11d8f7a634a204b4e0fdef7116880c9d, findElement {using=css selector, value=button.btn.btn-add-outline}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.184, chrome: {chromedriverVersion: 138.0.7204.92 (f079b9bc781e..., userDataDir: C:\Users\MEGAST~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61990}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61990/devtoo..., se:cdpVersion: 138.0.7204.184, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 11d8f7a634a204b4e0fdef7116880c9d
+at jdk.internal.reflect.GeneratedConstructorAccessor15.newInstance(Unknown Source)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:351)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at jdk.proxy2/jdk.proxy2.$Proxy17.isDisplayed(Unknown Source)
+at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+... 31 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- createAppealCase -->
-        <test-method is-config="true" signature="screenshotOnFailure(org.testng.ITestResult)[pri:0, instance:tests.AppealFeesTest@76f4b65]" started-at="2025-08-19T16:34:46 EEST" name="screenshotOnFailure" finished-at="2025-08-19T16:34:50 EEST" duration-ms="4280" status="PASS">
+        </test-method> <!-- createLaborArbitrationCase -->
+        <test-method is-config="true" signature="screenshotOnFailure(org.testng.ITestResult)[pri:0, instance:tests.AppealFeesTest@2f67b837]" started-at="2025-08-21T12:51:20 EEST" name="screenshotOnFailure" finished-at="2025-08-21T12:51:20 EEST" duration-ms="469" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=createAppealCase status=SUCCESS method=AppealFeesTest.createAppealCase()[pri:0, instance:tests.AppealFeesTest@76f4b65] output={null}]]]>
+                <![CDATA[[TestResult name=createLaborArbitrationCase status=FAILURE method=AppealFeesTest.createLaborArbitrationCase()[pri:0, instance:tests.AppealFeesTest@2f67b837] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- screenshotOnFailure -->
-        <test-method is-config="true" signature="stopDriver()[pri:0, instance:tests.AppealFeesTest@76f4b65]" started-at="2025-08-19T16:35:42 EEST" name="stopDriver" finished-at="2025-08-19T16:35:42 EEST" duration-ms="145" status="PASS">
+        <test-method is-config="true" signature="stopDriver()[pri:0, instance:tests.AppealFeesTest@2f67b837]" started-at="2025-08-21T12:51:20 EEST" name="stopDriver" finished-at="2025-08-21T12:51:21 EEST" duration-ms="645" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopDriver -->
       </class> <!-- tests.AppealFeesTest -->
-      <class name="tests.AppealFrontTest">
-        <test-method is-config="true" signature="loginAndGetInAppealFrontPart()[pri:0, instance:tests.AppealFrontTest@49ff7d8c]" started-at="2025-08-19T16:34:50 EEST" name="loginAndGetInAppealFrontPart" finished-at="2025-08-19T16:34:51 EEST" duration-ms="256" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginAndGetInAppealFrontPart -->
-        <test-method signature="testAddingInfoIntoAppealCase()[pri:0, instance:tests.AppealFrontTest@49ff7d8c]" started-at="2025-08-19T16:34:51 EEST" name="testAddingInfoIntoAppealCase" finished-at="2025-08-19T16:35:05 EEST" duration-ms="14245" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testAddingInfoIntoAppealCase -->
-        <test-method is-config="true" signature="screenshotOnFailure(org.testng.ITestResult)[pri:0, instance:tests.AppealFrontTest@49ff7d8c]" started-at="2025-08-19T16:35:05 EEST" name="screenshotOnFailure" finished-at="2025-08-19T16:35:09 EEST" duration-ms="4215" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=testAddingInfoIntoAppealCase status=SUCCESS method=AppealFrontTest.testAddingInfoIntoAppealCase()[pri:0, instance:tests.AppealFrontTest@49ff7d8c] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- screenshotOnFailure -->
-      </class> <!-- tests.AppealFrontTest -->
-      <class name="tests.AppealBackTest">
-        <test-method is-config="true" signature="loginAndGetInAppealPart()[pri:0, instance:tests.AppealBackTest@29526c05]" started-at="2025-08-19T16:35:09 EEST" name="loginAndGetInAppealPart" finished-at="2025-08-19T16:35:09 EEST" duration-ms="229" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginAndGetInAppealPart -->
-        <test-method signature="testAddingInfoIntoDivisionCommitteeCase()[pri:0, instance:tests.AppealBackTest@29526c05]" started-at="2025-08-19T16:35:09 EEST" name="testAddingInfoIntoDivisionCommitteeCase" finished-at="2025-08-19T16:35:38 EEST" duration-ms="28233" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testAddingInfoIntoDivisionCommitteeCase -->
-        <test-method is-config="true" signature="screenshotOnFailure(org.testng.ITestResult)[pri:0, instance:tests.AppealBackTest@29526c05]" started-at="2025-08-19T16:35:38 EEST" name="screenshotOnFailure" finished-at="2025-08-19T16:35:42 EEST" duration-ms="4266" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=testAddingInfoIntoDivisionCommitteeCase status=SUCCESS method=AppealBackTest.testAddingInfoIntoDivisionCommitteeCase()[pri:0, instance:tests.AppealBackTest@29526c05] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- screenshotOnFailure -->
-      </class> <!-- tests.AppealBackTest -->
-    </test> <!-- Appeal Cases Test -->
-  </suite> <!-- Trunk 58 Appeal Cases Suite -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

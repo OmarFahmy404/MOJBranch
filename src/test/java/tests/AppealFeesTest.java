@@ -22,11 +22,18 @@ public class AppealFeesTest extends TestBase
 	}
 	
 	
-	@Test
-	public void createAppealCase() throws InterruptedException
+	@Test(enabled = false)
+	public void createObjectionCase() throws InterruptedException
 	{
 		appealFeesPage=new AppealFeesPage(driver);
 		appealFeesPage.createObjectionCase("1", "اي كلام", "1");
+	}
+	
+	@Test
+	public void createLaborArbitrationCase() throws InterruptedException 
+	{
+		appealFeesPage=new AppealFeesPage(driver);
+		appealFeesPage.createLaborArbitrationCase();
 	}
 	
 	

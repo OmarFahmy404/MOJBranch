@@ -25,6 +25,9 @@ public class AppealFeesPage extends PageBase{
 	@FindBy(xpath = "/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/form/div[1]/div/ng-select/ng-dropdown-panel/div/div[2]/div[1]")
 	WebElement objectionReqestTypeMinor;
 	
+	@FindBy(xpath = "")
+	WebElement laborArbitration;
+	
 	@FindBy(name="GuildMembershipNumber")
 	WebElement memberShipNoField;
 	
@@ -111,6 +114,46 @@ public class AppealFeesPage extends PageBase{
 		clickBtn(saveBtn);
 		Thread.sleep(2000);
 
+	}
+	
+	
+	public void createLaborArbitrationCase() throws InterruptedException 
+	{
+		fluentWait(caseFeesTab);
+		clickBtn(caseFeesTab);
+		fluentWait(addBtn);
+		Thread.sleep(29000);
+		clickBtn(addBtn);
+		fluentWait(reqestTypeMajor);
+		selectFromDropdownList(reqestTypeMajor, "دعوى تحكيم عمالي");
+		
+		setTxt(memberShipNoField, "24");
+		clickBtn(memberShipNoBtn);
+		
+		selectFromDropDownNGList(employeeTaskLocationMajor, employeeTaskLocationMinor);
+		fluentWait(yesBtn);
+		clickBtn(yesBtn);
+		fluentWait(allFeesCheckBox);
+		clickBtn(allFeesCheckBox);
+		
+		setTxt(feesExemptionCategoryField, "سبب الاعفاء");
+		setTxt(feesExemptionReasonField, "اعفاء مؤقت كلي");
+		
+		clickBtn(addRequestBtn);
+		fluentWait(orderValueTypeMajor);
+		selectFromDropDownNGList(orderValueTypeMajor, OrderValueTypeMinor);
+		fluentWait(orderNoField);
+		setTxt(orderNoField, "1");
+		
+		clickBtn(saveOrderBtn);
+		fluentWait(saveCaseBtn);
+		clickBtn(saveCaseBtn);
+		fluentWait(reciptEstablishBtn);
+		Thread.sleep(2000);
+		clickBtn(reciptEstablishBtn);
+		fluentWait(saveBtn);
+		clickBtn(saveBtn);
+		Thread.sleep(2000);
 	}
 	
 }

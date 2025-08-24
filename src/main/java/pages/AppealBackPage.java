@@ -94,7 +94,7 @@ public class AppealBackPage extends PageBase {
 		
 		caseSearch(HelperPage.getData("Case Number"), HelperPage.getData("Case Classification"));
 		
-		Thread.sleep(Duration.ofSeconds(1));
+		Thread.sleep(1000);
 		fluentWait(fillingDataBtn);
 		clickBtn(fillingDataBtn);
 		
@@ -116,7 +116,7 @@ public class AppealBackPage extends PageBase {
 		clickBtn(saveBtn);
 		
 
-		Thread.sleep(Duration.ofSeconds(2));
+		Thread.sleep(2000);
 		clickBtn(closeBtn);
 		
 		fluentWait(originalOfTheLawsuitBtn);
@@ -124,7 +124,7 @@ public class AppealBackPage extends PageBase {
 
 		fluentWait(originalOfTheLawsuitBtn);
 		uploadPdf(originalOfTheLawsuitBtn);
-		Thread.sleep(Duration.ofSeconds(3));
+		Thread.sleep(3000);
 		uploadPdf(divisionCommitteeReportBtn);
 		
 	
