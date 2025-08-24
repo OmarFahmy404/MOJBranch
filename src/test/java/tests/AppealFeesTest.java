@@ -22,7 +22,7 @@ public class AppealFeesTest extends TestBase
 	}
 	
 	
-	@Test(enabled = false)
+	@Test
 	public void createObjectionCase() throws InterruptedException
 	{
 		appealFeesPage=new AppealFeesPage(driver);
@@ -34,6 +34,13 @@ public class AppealFeesTest extends TestBase
 	{
 		appealFeesPage=new AppealFeesPage(driver);
 		appealFeesPage.createLaborArbitrationCase();
+	}
+	
+	@Test
+	public void createQuarrelCase() throws InterruptedException 
+	{
+		appealFeesPage=new AppealFeesPage(driver);
+		appealFeesPage.createQuarrelCase();
 	}
 	
 	

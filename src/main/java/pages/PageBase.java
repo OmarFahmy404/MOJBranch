@@ -92,7 +92,8 @@ public class PageBase {
 	@FindBy(xpath = "/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/div/div[1]/div/form/div[1]/div[4]/ng-select/ng-dropdown-panel/div/div[2]/div")
 	static WebElement selectItem;
 	
-	
+	@FindBy(name="description")
+	static WebElement descriptionTxtFiled;
 	
 	
 	protected static void clickBtn(WebElement button) {
@@ -121,6 +122,17 @@ public class PageBase {
 		saveFileBtn.click();
 
 	}
+	
+	protected static void uploadPdfWithDesc(WebElement addElementBtn) {
+		clickBtn(addElementBtn);
+		setTxt(descriptionTxtFiled, "اي كلام");
+		selectDocBtn.sendKeys(pdfPath);
+		fluentWait(saveFileBtn);
+		saveFileBtn.click();
+
+	}
+	
+	
 
 
 	protected static void loginProcess

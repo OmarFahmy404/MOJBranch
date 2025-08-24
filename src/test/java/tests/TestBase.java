@@ -25,7 +25,7 @@ public class TestBase {
 
 	@AfterTest
 	public void stopDriver() {
-		driver.close();
+		//driver.close();
 	}
 
 	@AfterMethod

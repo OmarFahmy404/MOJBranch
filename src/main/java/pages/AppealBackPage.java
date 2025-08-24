@@ -22,7 +22,7 @@ public class AppealBackPage extends PageBase {
 	@FindBy(css ="button.btn.btn-sm.btn-grey-gallery-outline.my-2")
 	WebElement  fillingDataBtn;
 	
-	@FindBy(xpath = "(//button[contains(@class, 'btn-add-outline')])[3]")
+	@FindBy(xpath = "(//button[contains(@class, 'btn-add-outline')])[4]")
 	WebElement authorizationBtn;
 	
 	
@@ -76,6 +76,8 @@ public class AppealBackPage extends PageBase {
 	@FindBy( xpath ="(//button[contains(@class, 'btn-add-outline')])[7]")    //U Can locate xpath with the following temp (//*type*[contains(class, '')])[*element number*]
 	WebElement divisionCommitteeReportBtn ;
 	
+
+	
 	@FindBy(css ="button.btn.btn-sm.btn-save.float-left")
 	WebElement theLastSaveBtn ;
 	
@@ -85,7 +87,11 @@ public class AppealBackPage extends PageBase {
 	@FindBy( css="button.swal2-confirm.swal2-styled.swal2-default-outline")
 	WebElement confirmBtn ;
 	
+	@FindBy(name="disputeReason")
+	WebElement disputeReasonTxtFiled;
 	
+	@FindBy(xpath = "/html/body/app-root/block-ui/div/inner-container/main/div/div[2]/ng-component/div[2]/form/div[5]/div[2]/div/div/table/tbody/tr/td[2]/document-actions/button")
+	WebElement pdfBtn;
 	
 	public void addingInfoIntoDivisionCommitteeCase(String differentNo,String idNo) throws InterruptedException 
 	{
@@ -137,5 +143,99 @@ public class AppealBackPage extends PageBase {
 		clickBtn(confirmBtn);
 	}
 	
+	public void addingInfoIntoLaborArbitrationCase(String differentNo,String idNo) throws InterruptedException 
+	{
+		fluentWait(appealCasesTab);
+		clickBtn(appealCasesTab);
+		
+		caseSearch(HelperPage.getData("Case Number"), HelperPage.getData("Case Classification"));
+		
+		Thread.sleep(1000);
+		fluentWait(fillingDataBtn);
+		clickBtn(fillingDataBtn);
+		
+		fluentWait(authorizationBtn);
+		clickBtn(authorizationBtn);
+		
+		fluentWait(establishedCountryMajor);
+		selectFromDropDownNGList(establishedCountryMajor, secondSelectMinor);
+		selectFromDropDownNGList(establishedYearMajor, secondSelectMinor);
+		selectFromDropDownNGList(authorizationTypeMajor, secondSelectMinor);
+		setTxt(egyptianMofaCertificationNumberTxt, differentNo);
+		clickBtn(showBtn);
+		fluentWait(editorTypeHasPowerOfAttorneyMajor);
+		selectFromDropDownNGList(editorTypeHasPowerOfAttorneyMajor, secondSelectMinor);
+		fluentWait(addNormalPersonBtn);
+		addNormalPerson(addNormalPersonBtn, nationalIdTxt, idNo, searchBtn, submitBtn);
+		
+		fluentWait(saveBtn);
+		clickBtn(saveBtn);
+		
+
+		Thread.sleep(2000);
+		clickBtn(closeBtn);
+		
+		fluentWait(originalOfTheLawsuitBtn);
+		setTxt(finalClaimsTxtbox, "اي كلام");
+
+		fluentWait(originalOfTheLawsuitBtn);
+		uploadPdf(originalOfTheLawsuitBtn);
+		
+		Thread.sleep(2000);
+		clickBtn(theLastSaveBtn);
+		Thread.sleep(1500);
+		clickBtn(doneBtn);
+		Thread.sleep(1500);
+		clickBtn(confirmBtn);
+	}
+	
+	public void addingInfoIntoQuarrelCase(String differentNo,String idNo) throws InterruptedException 
+	{
+		fluentWait(appealCasesTab);
+		clickBtn(appealCasesTab);
+		
+		caseSearch(HelperPage.getData("Case Number"), HelperPage.getData("Case Classification"));
+		
+		Thread.sleep(1000);
+		fluentWait(fillingDataBtn);
+		clickBtn(fillingDataBtn);
+		
+		fluentWait(authorizationBtn);
+		clickBtn(authorizationBtn);
+		
+		fluentWait(establishedCountryMajor);
+		selectFromDropDownNGList(establishedCountryMajor, secondSelectMinor);
+		selectFromDropDownNGList(establishedYearMajor, secondSelectMinor);
+		selectFromDropDownNGList(authorizationTypeMajor, secondSelectMinor);
+		setTxt(egyptianMofaCertificationNumberTxt, differentNo);
+		clickBtn(showBtn);
+		fluentWait(editorTypeHasPowerOfAttorneyMajor);
+		selectFromDropDownNGList(editorTypeHasPowerOfAttorneyMajor, secondSelectMinor);
+		fluentWait(addNormalPersonBtn);
+		addNormalPerson(addNormalPersonBtn, nationalIdTxt, idNo, searchBtn, submitBtn);
+		
+		fluentWait(saveBtn);
+		clickBtn(saveBtn);
+		
+
+		Thread.sleep(2000);
+		clickBtn(closeBtn);
+		
+		fluentWait(originalOfTheLawsuitBtn);
+		setTxt(finalClaimsTxtbox, "اي كلام");
+		fluentWait(disputeReasonTxtFiled);
+		setTxt(disputeReasonTxtFiled, "اي كلام");
+
+		fluentWait(originalOfTheLawsuitBtn);
+		//uploadPdfWithDesc(originalOfTheLawsuitBtn);
+		uploadPdf(pdfBtn);
+		
+		Thread.sleep(2000);
+		clickBtn(theLastSaveBtn);
+		Thread.sleep(1500);
+		clickBtn(doneBtn);
+		Thread.sleep(1500);
+		clickBtn(confirmBtn);
+	}
 	
 }

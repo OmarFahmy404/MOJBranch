@@ -25,7 +25,21 @@ public class AppealBackTest extends TestBase
 	public void testAddingInfoIntoDivisionCommitteeCase() throws InterruptedException 
 	{
 		appealBackPage=new AppealBackPage(driver);
-		appealBackPage.addingInfoIntoDivisionCommitteeCase(String.valueOf(new Faker().number()),"29811111111124");
+		appealBackPage.addingInfoIntoDivisionCommitteeCase(String.valueOf(new Faker().phoneNumber()),"29811111111124");
+	}
+	
+	@Test
+	public void testAddingInfoIntoLaborArbitrationCase() throws InterruptedException 
+	{
+		appealBackPage=new AppealBackPage(driver);
+		appealBackPage.addingInfoIntoLaborArbitrationCase(String.valueOf(new Faker().phoneNumber()),"29811111111124");
+	}
+	
+	@Test
+	public void testAddingInfoIntoQuarrelCase() throws InterruptedException 
+	{
+		appealBackPage=new AppealBackPage(driver);
+		appealBackPage.addingInfoIntoQuarrelCase(String.valueOf(new Faker().phoneNumber()),"29811111111124");
 	}
 	
 }
