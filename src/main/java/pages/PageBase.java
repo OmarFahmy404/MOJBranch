@@ -30,7 +30,7 @@ public class PageBase {
 
 		action = new Actions(driver);
 
-		noSuchEleWait = new FluentWait<WebDriver>(driver).withTimeout(Duration.ofSeconds(30))
+		noSuchEleWait = new FluentWait<WebDriver>(driver).withTimeout(Duration.ofSeconds(60))
 				.pollingEvery(Duration.ofSeconds(2)).ignoring(NoSuchElementException.class);
 
 		eleClkIntercWait = new FluentWait<WebDriver>(driver).withTimeout(Duration.ofSeconds(60))

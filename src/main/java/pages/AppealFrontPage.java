@@ -182,6 +182,7 @@ public 	String caseClassification=null;
 		fluentWait(disputeCaseReqesterMajor);
 		selectFromDropDownNGList(disputeCaseReqesterMajor, disputeCaseReqesterMinor);
 		selectFromDropDownNGList(caseMajor, caseMinor);
+		fluentWait(isjudgeRadioBtn);
 		clickBtn(isjudgeRadioBtn);
 		fluentWait(nameMajor);
 		selectFromDropDownNGList(nameMajor, nameMinor);

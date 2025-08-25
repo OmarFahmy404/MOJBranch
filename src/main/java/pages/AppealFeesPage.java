@@ -258,6 +258,7 @@ public class AppealFeesPage extends PageBase{
 		clickBtn(searchCaseBtn);
 		
 		setTxt(caseIdTxtFiled, "1");
+		Thread.sleep(3000);
 		selectFromDropDownNGList(yearMajor, yearMinor);
 		selectFromDropDownNGList(classificationTypeMajor, classificationTypeMinor);
 		selectFromDropDownNGList(courtMajor, courtMinor);

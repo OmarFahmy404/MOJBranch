@@ -39,7 +39,7 @@ public class AppealBackTest extends TestBase
 	public void testAddingInfoIntoQuarrelCase() throws InterruptedException 
 	{
 		appealBackPage=new AppealBackPage(driver);
-		appealBackPage.addingInfoIntoQuarrelCase(String.valueOf(new Faker().phoneNumber()),"29811111111124");
+		appealBackPage.addingInfoIntoQuarrelCase(String.valueOf(new Faker().phoneNumber().subscriberNumber(4)),"29811111111124");
 	}
 	
 }
